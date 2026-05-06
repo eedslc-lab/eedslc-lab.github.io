@@ -1,15 +1,35 @@
-
+@font-face {
+    font-family: 'Merriweather-SemiBold';
+    src: url("Merriweather_Sans/static/MerriweatherSans-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url("Merriweather_Sans/static/MerriweatherSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'Merriweather-Light';
+    src: url('Merriweather_Sans/static/MerriweatherSans-Light.ttf');
+}
 html{
     height: 100%;
+    width: 100vw;
 }
 body{
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
-    background-image: url(IMG_0805.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+#home-container{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 52em;
+}
+#home-background{
+    display: flex;
+    width: 100%;
+    height: 52em;
+    object-fit: cover;
 }
 #navigation-header-container{
     display: flex;
@@ -45,19 +65,95 @@ body{
     display: flex;
     font-size: 1.5em;
     align-items: center;
+    font-family: "Merriweather";
+}
+#header-title:hover{
+    cursor: pointer;
 }
 #nav-header-nav-container{
     display: flex;
-    width: 45%;
     justify-content: center;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 #header-nav-container{
     display: flex;
-    flex-direction: row;
     gap: 4em;
+}
+.nav-button{
+    font-family: "Merriweather-SemiBold";
+    letter-spacing: 3%;
+    word-spacing: 10%;
     color: #EED6D5;
+}
+#phone-nav{
+    text-decoration: none;
 }
 .nav-button:hover{
     color: #FED13D;
     cursor: pointer;
+}
+#one-liner-container{
+    display: flex;
+    position: fixed;
+    background-color: #253031;
+    width: 30em;
+    height: fit-content;
+    top: 10em;
+    z-index: 99;
+}
+#one-liner{
+    display: flex;
+    color: #EED6D5;
+    font-size: 1.5em;
+    letter-spacing: 2%;
+    word-spacing: 5%;
+    line-height: 1.45em;
+    padding: 1em;
+    font-family: "Merriweather-Light";
+}
+#one-liner-tag{
+    display: flex;
+    width: 2em;
+    height: auto;
+    background-color: #FED13D;
+    z-index: 8;
+}
+#service-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 46.2em;
+    top: 52em;
+    background-color: #C13B24;
+
+}
+#service-title{
+    display: flex;
+    color: #EED6D5;
+    width: 100%;
+    justify-content: center;
+    font-size: 3em;
+    padding-top: .4em;
+    font-family: "Merriweather";
+    z-index: 0;
+}
+#projects-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 46.2em;
+    top: 52em;
+    background-color: #FED13D;
+
+}
+#projects-title{
+    display: flex;
+    color: #EED6D5;
+    width: 100%;
+    justify-content: center;
+    font-size: 3em;
+    padding-top: .4em;
+    font-family: "Merriweather";
+    z-index: 0;
 }
