@@ -91,15 +91,14 @@ section {
     text-decoration: none;
 }
 
-/* HERO SECTION */
+/* HOME SECTION */
 #home {
-    padding-top: 6em; /* prevents overlap with fixed navbar */
+    padding-top: .5em; /* prevents overlap with fixed navbar */
 }
 
 #home-container {
     width: 100%;
     height: 52em;
-    position: relative;
 }
 
 #home-background {
@@ -110,12 +109,12 @@ section {
 
 /* ONE LINER */
 #one-liner-container {
-    display: none; /* keep hidden unless you enable it */
-    position: fixed;
+    display: flex; /* keep hidden unless enabled */
+    position: absolute;
     background-color: #253031;
     width: 30em;
     top: 10em;
-    z-index: 99;
+    z-index: 98;
 }
 
 #one-liner {
@@ -127,8 +126,11 @@ section {
 }
 
 #one-liner-tag {
+    display: flex;
     width: 2em;
     background-color: #FED13D;
+    height: auto;
+    z-index: 99;
 }
 
 /* SERVICES SECTION */
@@ -157,13 +159,26 @@ section {
 .service-cards {
     background-color: #253031;
     width: 20em;
-    height: 12em;
+    height: auto;
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
     padding: 1em;
+}
+.service-card-title {
+    font-size: 2em;
+    text-align: center;
+}
+.service-card-image {
+    width: 20em;
+    padding: 1em;
+    height: 13em;
+    object-fit: cover;
+}
+.service-card-info { 
+    font-size: .9em;
 }
 
 /* PROJECTS SECTION */
