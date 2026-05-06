@@ -80,15 +80,21 @@ section {
 .nav-button {
     font-family: "Merriweather-SemiBold";
     color: #EED6D5;
+    word-spacing: .3em;
+    text-decoration: none;
 }
 
 .nav-button:hover {
     color: #FED13D;
     cursor: pointer;
 }
-
-#phone-nav {
+.contact-button:hover {
+    color: #FED13D;
+    cursor: pointer;
+}
+.contact-button {
     text-decoration: none;
+    color: #EED6D5;
 }
 
 /* HOME SECTION */
@@ -112,7 +118,7 @@ section {
     display: flex; /* keep hidden unless enabled */
     position: absolute;
     background-color: #253031;
-    width: 30em;
+    width: auto;
     top: 10em;
     z-index: 98;
 }
@@ -127,7 +133,7 @@ section {
 
 #one-liner-tag {
     display: flex;
-    width: 2em;
+    width: .8em;
     background-color: #FED13D;
     height: auto;
     z-index: 99;
@@ -147,13 +153,21 @@ section {
     font-size: 2em;
     font-family: "Merriweather-Bold";
 }
+#service-title-underline {
+    display: flex;
+    width: 8em;
+    height: .5em;
+    background-color: #253031;
+    border-radius: 1em;
+}
 
 #service-card-container {
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 5em;
     margin-top: 3em;
     flex-wrap: wrap;
+    
 }
 
 .service-cards {
@@ -166,6 +180,7 @@ section {
     align-items: center;
     justify-content: flex-start;
     padding: 1em;
+    border-radius: 1em;
 }
 .service-card-title {
     font-size: 2em;
