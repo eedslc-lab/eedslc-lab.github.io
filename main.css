@@ -3,6 +3,10 @@
     src: url("Merriweather_Sans/static/MerriweatherSans-SemiBold.ttf");
 }
 @font-face {
+    font-family: 'Merriweather-Bold';
+    src: url("Merriweather_Sans/static/MerriweatherSans-Bold.ttf");
+}
+@font-face {
     font-family: 'Merriweather';
     src: url("Merriweather_Sans/static/MerriweatherSans-Regular.ttf");
 }
@@ -78,7 +82,7 @@ body{
 }
 #header-nav-container{
     display: flex;
-    gap: 4em;
+    gap: 3em;
 }
 .nav-button{
     font-family: "Merriweather-SemiBold";
@@ -101,6 +105,7 @@ body{
     height: fit-content;
     top: 10em;
     z-index: 99;
+    display: none;
 }
 #one-liner{
     display: flex;
@@ -125,18 +130,20 @@ body{
     width: 100%;
     height: 46.2em;
     top: 52em;
-    background-color: #C13B24;
+    background-color: rgba(238, 214, 213, 1)
 
 }
 #service-title{
     display: flex;
-    color: #EED6D5;
+    color: #253031;
     width: 100%;
-    justify-content: center;
-    font-size: 3em;
-    padding-top: .4em;
-    font-family: "Merriweather";
+    font-size: 1.5em;
+    padding-top: 1.8em;
+    font-family: "Merriweather-Bold";
     z-index: 0;
+    /* justify-content: center; */
+    position: relative;
+    left: 4em;
 }
 #projects-container{
     display: flex;
@@ -149,11 +156,11 @@ body{
 }
 #projects-title{
     display: flex;
-    color: #EED6D5;
+    color: #253031;
     width: 100%;
     justify-content: center;
     font-size: 3em;
     padding-top: .4em;
-    font-family: "Merriweather";
+    font-family: "Merriweather-Bold";
     z-index: 0;
 }
