@@ -215,10 +215,9 @@ section {
     background-color: #EED6D5;
     color: #253031;
     display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    width: 20em;
+    flex-shrink: 0;
 }
 .service-cards:hover .service-card-image {
     opacity: 0.3;
@@ -227,8 +226,9 @@ section {
     opacity: 1;
 }
 .service-image-overlay {
-    transition: 1s ease;
     opacity: 0;
+    transition: opacity 1s ease;
+    will-change: opacity;
     position: absolute;
     text-align: center;
     top: 3.5em;
@@ -246,7 +246,9 @@ section {
     height: 13em;
     object-fit: cover;
     border-radius: 2em;
-    transition: 1s ease;
+    opacity: 1;
+    transition: opacity 1s ease;
+    will-change: opacity;
 }
 
 .service-card-info { 
