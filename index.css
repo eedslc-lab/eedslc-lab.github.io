@@ -217,7 +217,7 @@ section {
     display: flex;
     width: 90%;
     padding: 1em;
-    margin: 5%;
+    margin: 1% 5% 0;
     font-size: 1.3em;
     font-family: "Merriweather-Light";
     text-align: center;
@@ -237,43 +237,72 @@ section {
     color: #253031;
     display: inline-block;
     position: relative;
-    width: 20em;
+    width:20em;
+    height: 25em;
     flex-shrink: 0;
-}
-.service-cards:hover .service-card-image {
-    opacity: 0.3;
-}
-.service-cards:hover .service-image-overlay {
-    opacity: 1;
-}
-.service-image-overlay {
-    opacity: 0;
-    transition: opacity 1s ease;
-    will-change: opacity;
-    position: absolute;
-    text-align: center;
-    top: 3.5em;
-}
-.text {
-    color: #253031;
-    font-size: 2em;
-}
-.service-card-title {
-    font-size: 2em;
-    text-align: center;
-}
-.service-card-image {
-    width: 20em;
-    height: 13em;
-    object-fit: cover;
-    /* border-radius: 2em; */
-    opacity: 1;
-    transition: opacity 1s ease;
-    will-change: opacity;
+    perspective: 1000px;    /* creates the 3D depth */
 }
 
-.service-card-info { 
-    font-size: 1em;
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.service-cards:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;   /* hides the face when rotated away */
+    -webkit-backface-visibility: hidden;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: #C13B24;
+
+}
+
+.card-back {
+    background-color: #253031;
+    color: #EED6D5;
+    transform: rotateY(180deg);    /* starts pre-flipped so it appears on hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.card-front-title {
+    font-size: 1.5em;
+    font-family: "Merriweather-Bold";
+    text-align: center;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back-info {
+    font-size: 0.9em;
+    font-family: "Merriweather-Light";
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.service-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* PROJECTS SECTION */
