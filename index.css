@@ -94,7 +94,7 @@ section {
     opacity: 0;
     transform: translateX(20px);
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 #navigation-menu.open {
@@ -115,6 +115,9 @@ section {
     color: #FED13D;
     cursor: pointer;
 }
+.nav-button.active {
+    font-size: 1.3em;
+}
 .contact-button:hover {
     color: #FED13D;
     cursor: pointer;
@@ -127,7 +130,6 @@ section {
 
 /* HOME SECTION */
 #home {
-    position: sticky;
     scroll-snap-align: start;
     top: 0;
     height: 100vh;
@@ -179,7 +181,6 @@ section {
 }
 /* SERVICES SECTION */
 #service {
-    position: sticky;
     scroll-snap-align: start;
     top: 0;
     z-index: 2;
@@ -200,6 +201,8 @@ section {
     border-radius: 2em 2em 0 0;
     box-shadow: 0 -10px 30px rgba(0,0,0,.25);
     padding-top: 2em;
+    transform-style: flat;
+
 }
 #service-title {
     color: #253031;
@@ -221,7 +224,7 @@ section {
     font-size: 1.3em;
     font-family: "Merriweather-Light";
     text-align: center;
-    background-color: #C13B24;
+    background-color: #F37B18;
     border-radius: .5em;
 }
 #service-card-container {
@@ -240,18 +243,30 @@ section {
     width:20em;
     height: 25em;
     flex-shrink: 0;
-    perspective: 1000px;    /* creates the 3D depth */
+    perspective: 1000px; 
+    border-color: #F37B18;
+    border-radius: 1em;
+    will-change: padding;
+    transition: padding .5s ease;
+    background-color: #F37B18;
+    isolation: isolate;
+} 
+.service-cards:hover {
+    padding: 0.5em;
+    isolation: isolate;
 }
 
 .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
+    will-change: transform;
     transform-style: preserve-3d;
     transition: transform 0.8s ease;
 }
 
-.service-cards:hover .card-inner {
+.service-cards.flipped .card-inner {
+    will-change: transform;
     transform: rotateY(180deg);
 }
 
@@ -265,16 +280,16 @@ section {
     border-radius: 1em;
     overflow: hidden;
 }
-
 .card-front {
-    background-color: #C13B24;
-
+    background-color: #F37B18;
+    color:#253031
 }
 
 .card-back {
     background-color: #253031;
     color: #EED6D5;
-    transform: rotateY(180deg);    /* starts pre-flipped so it appears on hover */
+    will-change: rotate;
+    transform: rotateY(180deg); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,14 +297,16 @@ section {
     padding: 1em;
     box-sizing: border-box;
 }
+/* .card-front.highlight {
+    background-color: #253031;
+    color: #F37B18;
+} */
 
 .card-front-title {
     font-size: 1.5em;
     font-family: "Merriweather-Bold";
     text-align: center;
-    height: 3em;
-    align-items: center;
-    justify-content: center;
+    padding: .7em;
 }
 
 .card-back-info {
@@ -307,7 +324,6 @@ section {
 
 /* PROJECTS SECTION */
 #projects {
-    position: sticky;
     scroll-snap-align: start;
     top: 0;
     z-index: 3;
@@ -376,6 +392,10 @@ section {
 }
 .project-card-info { 
     font-size: 1em;
+}
+/* Universal */
+.sticky {
+    position: sticky;
 }
 /* Material Symbols Outlined */
 #dropdown-indicator {
