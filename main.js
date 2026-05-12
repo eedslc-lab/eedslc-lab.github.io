@@ -13,21 +13,11 @@ menuToggle.addEventListener("click", () => {
 headerTitle.addEventListener("click", () => {
     window.location.replace("index.html")
 });
-homeNav.addEventListener("click" , () =>{
-    console.log("clicked")
-});
 document.querySelectorAll('.service-cards').forEach(card => {
-    card.addEventListener('click', () => {
-        setTimeout(() => card.classList.toggle('flipped'), 150);
-    });
-});
-document.querySelectorAll('.card-front').forEach(card => {
     card.addEventListener('mouseenter', () => {
-        card.classList.add("highlight");
-    })
+        card.classList.add('flipped');
+    });
     card.addEventListener('mouseleave', () => {
-        card.classList.remove('highlight');
+        card.classList.remove('flipped');
     });
 });
-
-
