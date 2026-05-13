@@ -81,9 +81,9 @@
     gap: 2em;
     text-align: center;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     transform: translateX(20px);
-    pointer-events: none;
+    pointer-events: all;
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -113,4 +113,18 @@
 
 .contact-button:hover {
     color: #FED13D;
+}
+/* Material Symbols */
+#dropdown-indicator {
+    display: flex;
+}
+
+.menu-dropdown {
+    font-size: 3em !important;
+    color: #EED6D5;
+}
+
+.menu-dropdown:hover {
+    color: #FED13D;
+    cursor: pointer;
 }

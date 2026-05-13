@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Merriweather-SemiBold';
+    src: url("Merriweather_Sans/static/MerriweatherSans-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'Merriweather-Bold';
+    src: url("Merriweather_Sans/static/MerriweatherSans-Bold.ttf");
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url("Merriweather_Sans/static/MerriweatherSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'Merriweather-Light';
+    src: url('Merriweather_Sans/static/MerriweatherSans-Light.ttf');
+}
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 25em;
+    min-height: 20vh;
+    background-color: #253031;
+}
+#footer-info-container {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    color: #F2EFED;
+}
+#footer-logo-license-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;    
+}
+#footer-logo {
+    display: flex;
+    width: 10em;
+}
+#footer-license {
+    font-family: "Merriweather-Light";
+    font-size: 1.3em;
+    letter-spacing: .08em;
+}
+.footer-info-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2em;
+}
+.footer-titles {
+    font-size: 2em;
+    letter-spacing: 0.03em;
+    width: fit-content;
+    font-family: "Meriweather-Bold";
+    line-height: 95%;
+}
+.footer-title-underlines {
+    display: flex;
+    background-color: #F37B18;
+    height: .1em;
+    border-radius: .08em;
+}
+.footer-info {
+    display: flex;
+    font-family: "Merriweather-Light";
+    font-size: 1.3em;
+    flex-direction: column;
+    justify-content: flex-start;
+    letter-spacing: .1em;
+    width: fit-content;
+    max-width: 9em;
+    line-height: 1.9em;
+}   
+.footer-navigation-buttons {
+    text-decoration: none;
+    color: #F2EFED;
+    width: auto;
+    z-index: 8;
+}
+
+.footer-navigation-buttons:hover{
+    text-decoration: underline solid #F37B18 .15em;
+    text-underline-offset: .2em;
+    text-decoration-skip-ink: none;
+}
+#footer-license-container {
+    
+}
+#footer-navigation-container {
+    
+}
+
+
+#footer-copyright-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    color: #F2EFED;
+    width: 100%;
+    height: 10%;
+    font-family: "Merriweather-Light";
+    letter-spacing: 0.07em;
+}
+#copyright {
+    font-family: "Merriweather-Regular";
+}

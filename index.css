@@ -20,6 +20,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 section {
@@ -80,6 +81,7 @@ section {
 /* SERVICES */
 #service {
     display: flex;
+    box-sizing: border-box;
     min-height: 50vh;
     justify-content: center;
     align-items: center;
@@ -90,7 +92,6 @@ section {
 #service-container {
     min-height: 50vh;
     width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +110,7 @@ section {
     font-size: 3em;
     font-family: "Merriweather-Bold";
     text-align: start;
-    line-height: 100%;
+    line-height: 95%;
 
 }
 
@@ -117,7 +118,7 @@ section {
     display: flex;
     width: auto;
     height: .19em;
-    background-color: #253031;
+    background-color: #F37B18;
     border-radius: 3em;
 
 }
@@ -164,6 +165,7 @@ section {
 /* PROJECTS */
 #projects {
     display: flex;
+    box-sizing: border-box;
     min-height: 50vh;
     justify-content: center;
     align-items: center;
@@ -173,7 +175,6 @@ section {
 #projects-container {
     min-height: 50vh;
     width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,17 +193,16 @@ section {
     font-size: 3em;
     font-family: "Merriweather-Bold";
     text-align: start;
-    line-height: 100%;
-
+    line-height: 95%;
 }
 
 #projects-title-underline {
     display: flex;
     width: auto;
     height: .19em;
-    background-color: #253031;
+    background-color: #F37B18;
     border-radius: 3em;
-
+    
 }
 
 #project-card-container {
@@ -226,7 +226,8 @@ section {
     border-radius: 1em;
     position: relative;
     transition: padding 1s ease-in-out;
-    
+    box-shadow: .0em .0em .2em .006em #6d7071;
+
 }
 .project-image-overlay {
     display: flex;
@@ -261,16 +262,3 @@ section {
 }
 
 /* MATERIAL SYMBOLS */
-#dropdown-indicator {
-    display: flex;
-}
-
-.menu-dropdown {
-    font-size: 3em !important;
-    color: #EED6D5;
-}
-
-.menu-dropdown:hover {
-    color: #FED13D;
-    cursor: pointer;
-}
