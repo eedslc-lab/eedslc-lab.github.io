@@ -21,6 +21,7 @@ html, body {
     padding: 0;
     min-height: 100vh;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 section {
@@ -79,53 +80,10 @@ section {
 }
 
 /* SERVICES */
-#service {
-    display: flex;
-    box-sizing: border-box;
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #F2F1ED;
-    box-shadow: .0em .0em 1em 1em #253031;
-}
-
-#service-container {
-    min-height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 0em 4em;
-}
-#service-container-box {
-    display: flex;
-    width: fit-content;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#service-title {
-    color: #253031;
-    width: fit-content;
-    font-size: 3em;
-    font-family: "Merriweather-Bold";
-    text-align: start;
-    line-height: 95%;
-
-}
-
-#service-title-underline {
-    display: flex;
-    width: auto;
-    height: .19em;
-    background-color: #F37B18;
-    border-radius: 3em;
-
-}
-
 #service-info {
     display: flex;
     width: fit-content;
+    max-width: 90%;
     margin: 1em 0em;
     font-size: 1.3em;
     font-family: "Merriweather-Light";
@@ -163,52 +121,10 @@ section {
     box-shadow: .0em .0em .1em .006em #6d7071;
 }
 /* PROJECTS */
-#projects {
-    display: flex;
-    box-sizing: border-box;
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #F2F1ED;
-}
-
-#projects-container {
-    min-height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 0em 4em;
-}
-#projects-container-box {
-    display: flex;
-    width: fit-content;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#projects-title {
-    color: #253031;
-    width: fit-content;
-    font-size: 3em;
-    font-family: "Merriweather-Bold";
-    text-align: start;
-    line-height: 95%;
-}
-
-#projects-title-underline {
-    display: flex;
-    width: auto;
-    height: .19em;
-    background-color: #F37B18;
-    border-radius: 3em;
-    
-}
-
 #project-card-container {
     display: flex;
-    justify-content: center;
-    gap: 3em;
+    justify-content: space-evenly;
+    gap: 1.7em;
     margin-top: 1em;
     flex-wrap: wrap;
     height: auto;
@@ -217,7 +133,7 @@ section {
 .project-cards {
     display: flex;
     width: 20em;
-    height: 13em;
+    height: 18em;
     padding: 1em;
     background-color: #253031;
     flex-direction: column;
@@ -234,9 +150,8 @@ section {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: inherit;
-    height: inherit;
-    margin: 1em;
+    width: 100%;
+    height: 100%;
     border-radius: inherit;
     background-color: #F37B18;
     color: #F2F1ED;
@@ -261,4 +176,71 @@ section {
     opacity: 0.6;
 }
 
-/* MATERIAL SYMBOLS */
+/* About */
+#about-info-box {
+    display: flex;
+    width: 30em;
+    max-width: 90%;
+    height: 15em;
+    background-color: #F37B18;
+    margin: 1em auto;
+    font-size: 1.3em;
+    font-family: "Merriweather-Light";
+    justify-content: center;
+    letter-spacing: 2%;
+    word-spacing: 5%;
+    line-height: 125%;
+    gap: 1.2em;
+    border-radius: .8em;
+    box-shadow: .0em .0em .2em .006em #6d7071;
+
+}
+#about-info {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+}
+
+/* Sections */
+.info-sections{
+    display: flex;
+    box-sizing: border-box;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F1ED;
+}
+.info-section-boxes{
+    min-height: 50vh;
+    width: 77em;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0em 2em;
+}
+.info-section-box-boxes {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.title-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+.section-titles {
+    color: #253031;
+    width: fit-content;
+    font-size: 3em;
+    font-family: "Merriweather-Bold";
+    line-height: 95%;
+}
+.section-title-underlines {
+    display: flex;
+    width: 100%;
+    height: .19em;
+    background-color: #F37B18;
+    border-radius: .07em;
+}

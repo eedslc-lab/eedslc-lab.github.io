@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 25em;
+    height: 20em;
     min-height: 20vh;
     background-color: #253031;
 }
@@ -35,6 +35,7 @@
 #footer-logo-license-container {
     display: flex;
     height: 100%;
+    padding-top: 1.5em;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 1em;    
@@ -90,13 +91,6 @@
     text-underline-offset: .2em;
     text-decoration-skip-ink: none;
 }
-#footer-license-container {
-    
-}
-#footer-navigation-container {
-    
-}
-
 
 #footer-copyright-container {
     display: flex;
