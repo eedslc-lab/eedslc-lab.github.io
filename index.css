@@ -20,7 +20,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    max-width: 100vw;
+    width: 100vw;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -180,10 +180,9 @@ section {
 /* About */
 #about-info-box {
     display: flex;
-    width: 30em;
+    width: auto;
     max-width: 90%;
-    height: 15em;
-    background-color: #F37B18;
+    height: auto;
     margin: 1em auto;
     font-size: 1.3em;
     font-family: "Merriweather-Light";
@@ -192,14 +191,15 @@ section {
     word-spacing: 5%;
     line-height: 125%;
     gap: 1.2em;
-    border-radius: .8em;
-    box-shadow: .0em .0em .2em .006em #6d7071;
-
+    
 }
-#about-info {
+.about-info {
     display: flex;
     justify-content: flex-start;
     padding: 1em;
+    border-radius: .8em;
+    background-color: #F37B18;
+    box-shadow: .0em .0em .2em .006em #6d7071;
 }
 
 /* Sections */

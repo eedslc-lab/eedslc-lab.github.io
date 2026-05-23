@@ -80,7 +80,7 @@ html, body {
     display: inline-block;
     position: relative;
     width: 25em;
-    height: 25em;
+    height: 30em;
     flex-shrink: 0;
     perspective: 1000px;
     border-radius: 1em;
@@ -130,7 +130,7 @@ html, body {
 }
 
 .card-front-title {
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: "Merriweather-Bold";
     text-align: center;
     padding: .7em;
