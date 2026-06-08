@@ -21,3 +21,9 @@ document.querySelectorAll('.service-cards').forEach(card => {
         card.classList.remove('flipped');
     });
 });
+
+document.querySelectorAll(`.service-buttons`).forEach(button => {
+    button.addEventListener(`click`, () => {
+        window.location.href =`${button.id.split("-")[0]}.html`
+    })
+});

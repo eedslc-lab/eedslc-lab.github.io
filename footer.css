@@ -19,30 +19,24 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 20em;
-    min-height: 20vh;
+    height: 10em;
+    /* min-height: 20vh; */
     background-color: #253031;
 }
 #footer-info-container {
     display: flex;
     width: 100%;
-    height: 90%;
+    height: 100%;
     justify-content: space-evenly;
     align-items: center;
     gap: 2em;
     color: #F2EFED;
-}
+}  
 #footer-logo-license-container {
     display: flex;
-    height: 100%;
-    padding-top: 1.5em;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     gap: 1em;    
-}
-#footer-logo {
-    display: flex;
-    width: 10em;
 }
 #footer-license {
     font-family: "Merriweather-Light";
@@ -51,9 +45,11 @@
 }
 .footer-info-containers {
     display: flex;
+    width: auto;
+    height: 80%;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 2em;
+    justify-content: center;
+    gap: 1em;
 }
 .footer-titles {
     font-size: 2em;
@@ -76,7 +72,7 @@
     justify-content: flex-start;
     letter-spacing: .1em;
     width: fit-content;
-    max-width: 9em;
+    max-width: 18em;
     line-height: 1.9em;
 }   
 .footer-navigation-buttons {
@@ -90,18 +86,6 @@
     text-decoration: underline solid #F37B18 .15em;
     text-underline-offset: .2em;
     text-decoration-skip-ink: none;
-}
-
-#footer-copyright-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5em;
-    color: #F2EFED;
-    width: 100%;
-    height: 10%;
-    font-family: "Merriweather-Light";
-    letter-spacing: 0.07em;
 }
 #copyright {
     font-family: "Merriweather-Regular";
