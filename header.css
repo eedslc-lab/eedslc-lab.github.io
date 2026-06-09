@@ -34,7 +34,6 @@
     min-width: 20em;
     height: 100%;
     gap: 1em;
-    background-color: #F37B18;
     justify-content: space-around;
     align-items: center;
 
@@ -107,14 +106,6 @@
     color: #FED13D;
 }
 
-.contact-button {
-    text-decoration: none;
-    color: #EED6D5;
-}
-
-.contact-button:hover {
-    color: #FED13D;
-}
 /* Material Symbols */
 #dropdown-indicator {
     display: flex;

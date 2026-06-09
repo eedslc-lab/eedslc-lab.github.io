@@ -35,7 +35,8 @@ section {
 #home {
     height: 100vh;
     box-sizing: border-box;
-    background-color: #EED6D5;
+
+    background-color: #253031;
 }
 
 #home-container {
@@ -61,40 +62,45 @@ section {
 
 #about-container {
     display: flex;
-    background-color: #253031;
+    background-color: #F2F1ED;
     width: 56vw;
     z-index: 10;
 }
 
 #about-liner {
-    color: #EED6D5;
+    display: flex;
+    color: #253031;
     font-size: 1.5em;
     line-height: 1.45em;
     padding: 1em;
     font-family: "Merriweather-Light";
+
+}
+.contact-button {
+    text-decoration: none;
+    color: #253031;
+}
+
+.contact-button:hover {
+    font-size: 1.6rem;
+    color: #F37B18;
 }
 
 #contact-form-title {
     font-size: 1em;
 }
 
-#about-liner-tag {
-    display: flex;
-    width: 3em;
-    background-color: #FED13D;
-    height: auto;
-}
 #service-proj-container {
     display: flex;
     height: 15vh;
-    background-color: #6d7071;
+    background-color: #253031;
     padding: .5em 0em;
 }
 #service-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56vw;
+    width: 56%;
     flex-wrap: wrap;
     column-gap: 1em;
     row-gap: .1em;
@@ -104,6 +110,25 @@ section {
     border-radius: 1em;
     height: 1em;
     padding: 1em;
+}
+#project-box {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 44%;
+    gap: 1em;
+}
+.project-buttons {
+    display: flex;
+    width: 25%;
+    height: 85%;
+    color: #F2F1ED;
+    align-items: center;
+    justify-content: center;
+    font-family: "Merriweather-SemiBold";
+    font-size: 3em;
+    
 }
 
 /* SERVICES */
