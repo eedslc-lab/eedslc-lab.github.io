@@ -45,6 +45,7 @@
 #project-card-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 1.5em;
     width: 100%;
 }
