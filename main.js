@@ -1,18 +1,21 @@
-let homeNav = document.getElementById("home-nav");
-let serviceNav = document.getElementById("service-nav");
-let aboutNav = document.getElementById("about-nav");
-let projectNav = document.getElementById("projects-nav");
-let contactNav = document.getElementById("contact-nav");
-let headerTitle = document.getElementById("header-title");
-let menuToggle = document.getElementById("dropdown-indicator");
-let navMenu = document.getElementById("navigation-menu");
-let clicked =  "false";
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle('open');
-});
-headerTitle.addEventListener("click", () => {
-    window.location.replace("index.html")
-});
+// Header title
+const headerTitle = document.getElementById("header-title");
+if (headerTitle) {
+    headerTitle.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+}
+
+// Menu toggle
+const menuToggle = document.getElementById("dropdown-indicator");
+const navMenu = document.getElementById("navigation-menu");
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle('open');
+    });
+}
+
+// Service card flip on hover
 document.querySelectorAll('.service-cards').forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.classList.add('flipped');
@@ -22,8 +25,25 @@ document.querySelectorAll('.service-cards').forEach(card => {
     });
 });
 
-document.querySelectorAll(`.service-buttons`).forEach(button => {
-    button.addEventListener(`click`, () => {
-        window.location.href =`${button.id.split("-")[0]}.html`
-    })
+// Service buttons — navigate to their page by href, no JS needed
+// (buttons are now <a> tags in the updated index.html)
+
+// Count-up animation for project stat boxes
+document.querySelectorAll('.project-buttons').forEach(btn => {
+    const target = parseInt(btn.dataset.target);
+    if (!target) return;
+
+    const prefix = btn.dataset.prefix || "";
+    const suffix = btn.dataset.suffix || "";
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let step = 0;
+
+    const timer = setInterval(() => {
+        step++;
+        const current = Math.min(Math.round(increment * step), target);
+        btn.textContent = prefix + current + suffix;
+        if (step >= steps) clearInterval(timer);
+    }, duration / steps);
 });

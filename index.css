@@ -30,23 +30,24 @@ section {
     width: 100%;
 }
 
-
 /* HOME */
 #home {
     height: 100vh;
     box-sizing: border-box;
-
     background-color: #253031;
+    display: flex;
+    flex-direction: column;
 }
 
 #home-container {
     display: flex;
     width: 100%;
-    height: 84%;
+    height: 100%;
     position: relative;
     top: 13%;
     flex-direction: column;
 }
+
 #about-img-container {
     display: flex;
     width: 100%;
@@ -64,25 +65,25 @@ section {
     display: flex;
     background-color: #F2F1ED;
     width: 56vw;
-    z-index: 10;
 }
 
 #about-liner {
     display: flex;
+    flex-direction: column;
     color: #253031;
     font-size: 1.5em;
     line-height: 1.45em;
     padding: 1em;
     font-family: "Merriweather-Light";
-
+    gap: 0.5em;
 }
+
 .contact-button {
     text-decoration: none;
     color: #253031;
 }
 
 .contact-button:hover {
-    font-size: 1.6rem;
     color: #F37B18;
 }
 
@@ -92,10 +93,13 @@ section {
 
 #service-proj-container {
     display: flex;
-    height: 15vh;
+    height: auto;
+    min-height: 15vh;
     background-color: #253031;
     padding: .5em 0em;
+    align-items: center;
 }
+
 #service-box {
     display: flex;
     align-items: center;
@@ -103,14 +107,28 @@ section {
     width: 56%;
     flex-wrap: wrap;
     column-gap: 1em;
-    row-gap: .1em;
+    row-gap: .5em;
+    padding: .5em;
 }
+
 .service-buttons {
     background-color: #F37B18;
     border-radius: 1em;
-    height: 1em;
-    padding: 1em;
+    height: auto;
+    padding: .6em 1em;
+    text-decoration: none;
+    color: #F2F1ED;
+    font-family: "Merriweather-SemiBold";
+    font-size: .9em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
+
+.service-buttons:hover {
+    background-color: #FED13D;
+    color: #253031;
+}
+
 #project-box {
     display: flex;
     box-sizing: border-box;
@@ -118,17 +136,20 @@ section {
     justify-content: space-evenly;
     width: 44%;
     gap: 1em;
+    padding: .5em;
+    flex-wrap: wrap;
 }
+
 .project-buttons {
     display: flex;
     width: 25%;
-    height: 85%;
+    min-width: 8em;
     color: #F2F1ED;
     align-items: center;
     justify-content: center;
     font-family: "Merriweather-SemiBold";
-    font-size: 3em;
-    
+    font-size: 2em;
+    text-align: center;
 }
 
 /* SERVICES */
@@ -140,11 +161,10 @@ section {
     font-size: 1.3em;
     font-family: "Merriweather-Light";
     text-align: start;
-    letter-spacing: 2%;
-    word-spacing: 5%;
     line-height: 125%;
     gap: 1.2em;
 }
+
 .service-info-boxes {
     border-radius: .5em;
     width: 27em;
@@ -152,11 +172,13 @@ section {
     padding: 1em;
     box-shadow: .0em .0em .2em .006em #6d7071;
 }
+
 #service-nav-button-box {
     display: flex;
     width: 100%;
     justify-content: flex-end;
 }
+
 #service-nav-button {
     background-color: #253031;
     color: #F2F1ED;
@@ -167,11 +189,12 @@ section {
     box-shadow: .0em .0em .2em .006em #6d7071;
     width: 5em;
 }
+
 #service-nav-button:hover {
     background-color: #F37B18;
     color: #f2f2f2;
-    box-shadow: .0em .0em .1em .006em #6d7071;
 }
+
 /* PROJECTS */
 #project-card-container {
     display: flex;
@@ -195,8 +218,8 @@ section {
     position: relative;
     transition: padding 1s ease-in-out;
     box-shadow: .0em .0em .2em .006em #6d7071;
-
 }
+
 .project-image-overlay {
     display: flex;
     justify-content: center;
@@ -209,21 +232,22 @@ section {
     color: #F2F1ED;
     font-size: 3em;
     opacity: 0;
-    will-change: opacity;
     transition: opacity 1s ease-in-out;
 }
+
 .project-card-image {
     display: flex;
     width: inherit;
     height: inherit;
     object-fit: cover;
     border-radius: inherit;
-    will-change: opacity;
     transition: opacity 1s ease-in-out;
 }
+
 .project-cards:hover .project-card-image {
     opacity: 0.3;
 }
+
 .project-cards:hover .project-image-overlay {
     opacity: 0.6;
 }
@@ -238,12 +262,10 @@ section {
     font-size: 1.3em;
     font-family: "Merriweather-Light";
     justify-content: center;
-    letter-spacing: 2%;
-    word-spacing: 5%;
     line-height: 125%;
     gap: 1.2em;
-    
 }
+
 .about-info {
     display: flex;
     justify-content: flex-start;
@@ -254,7 +276,7 @@ section {
 }
 
 /* Sections */
-.info-sections{
+.info-sections {
     display: flex;
     box-sizing: border-box;
     min-height: 50vh;
@@ -262,26 +284,30 @@ section {
     align-items: center;
     background-color: #F2F1ED;
 }
-.info-section-boxes{
+
+.info-section-boxes {
     min-height: 50vh;
     width: 77em;
     max-width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 2em 0em 2em;
 }
+
 .info-section-box-boxes {
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
+
 .title-wrapper {
     display: flex;
     width: 100%;
     justify-content: flex-start;
 }
+
 .section-titles {
     color: #253031;
     width: fit-content;
@@ -289,6 +315,7 @@ section {
     font-family: "Merriweather-Bold";
     line-height: 95%;
 }
+
 .section-title-underlines {
     display: flex;
     width: 100%;

@@ -1,39 +1,19 @@
-@font-face {
-    font-family: 'Merriweather-SemiBold';
-    src: url("Merriweather_Sans/static/MerriweatherSans-SemiBold.ttf");
-}
-@font-face {
-    font-family: 'Merriweather-Bold';
-    src: url("Merriweather_Sans/static/MerriweatherSans-Bold.ttf");
-}
-@font-face {
-    font-family: 'Merriweather';
-    src: url("Merriweather_Sans/static/MerriweatherSans-Regular.ttf");
-}
-@font-face {
-    font-family: 'Merriweather-Light';
-    src: url('Merriweather_Sans/static/MerriweatherSans-Light.ttf');
-}
-/* RESET / BASE */
-html, body {
-    margin: 0;
-    padding: 0;
+#services {
+    display: flex;
+    justify-content: center;
+    background-color: #F2F1ED;
     min-height: 100vh;
-}
-
-#services{
-    min-height: 100vh;
-    padding: 8em 0em 3em;
-    background-color: #F2EFED;
+    padding-top: 13%;
+    box-sizing: border-box;
 }
 
 #service-container {
-    min-height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
+    width: 77em;
+    max-width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 2em 0em 4em;
 }
 
 #service-title {
@@ -41,55 +21,46 @@ html, body {
     width: fit-content;
     font-size: 3em;
     font-family: "Merriweather-Bold";
-    text-align: start;
-    line-height: 100%;
+    line-height: 95%;
+    margin-bottom: .2em;
 }
 
 #service-title-underline {
     display: flex;
-    height: .19em;
-    background-color: #253031;
-    border-radius: 3em;
+    width: 100%;
+    height: .1em;
+    background-color: #F37B18;
+    border-radius: .07em;
 }
 
 #service-info {
-    display: flex;
-    width: 40em;
-    padding: 1em;
-    margin: 2em;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-family: "Merriweather-Light";
-    justify-content: center;
-    text-align: center;
-    background-color: #F37B18;
-    border-radius: .5em;
+    line-height: 1.6em;
+    color: #253031;
+    margin: 1em 0em 2em;
+    max-width: 60em;
 }
-/* Service Cards */
+
 #service-card-container {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 1em;
     flex-wrap: wrap;
-    height: fit-content;
+    gap: 1.5em;
+    width: 100%;
 }
 
 .service-cards {
-    display: flex;
-    color: #253031;
-    position: relative;
     width: 20em;
-    height: 20em;
-    margin: 2em 1em;
-    align-items: center;
-    justify-content: center;
+    height: 15em;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: #253031;
+    box-shadow: 0em 0em .2em .006em #6d7071;
 }
 
 .service-card-image {
-    display: flex;
-    width: 95%;
-    height: 95%;
-    border-radius: 2em;
-    padding: 1em;
-    background-color: #F37B18;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
