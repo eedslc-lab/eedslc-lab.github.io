@@ -88,7 +88,7 @@ section {
 }
 
 #contact-form-title {
-    font-size: 1em;
+    font-size: .8em;
 }
 
 #service-proj-container {
@@ -138,6 +138,7 @@ section {
     gap: 1em;
     padding: .5em;
     flex-wrap: wrap;
+
 }
 
 .project-buttons {
@@ -151,6 +152,9 @@ section {
     font-size: 2em;
     text-align: center;
     text-decoration: none;
+}
+#completed-projects-button:hover {
+    color: #F37B18;
 }
 
 /* SERVICES */
