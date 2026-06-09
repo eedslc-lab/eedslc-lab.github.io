@@ -31,6 +31,7 @@
     align-items: center;
     gap: 2em;
     color: #F2EFED;
+    padding-bottom: 1em;
 }  
 #footer-logo-license-container {
     display: flex;
