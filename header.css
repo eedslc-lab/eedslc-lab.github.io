@@ -36,7 +36,6 @@
     gap: 1em;
     justify-content: space-around;
     align-items: center;
-
 }
 
 #header-image-container {
@@ -67,30 +66,13 @@
 #header-nav-container {
     display: flex;
     gap: 3em;
-    flex-direction: row-reverse;
     align-items: center;
 }
 
 #navigation-menu {
     display: flex;
-    position: relative;
-    z-index: 100;
-    width: auto;
-    height: 100%;
-    background-color: #253031;
     gap: 2em;
-    text-align: center;
     align-items: center;
-    opacity: 1;
-    transform: translateX(20px);
-    pointer-events: all;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-#navigation-menu.open {
-    opacity: 1;
-    transform: translateX(0px);
-    pointer-events: all;
 }
 
 .nav-button {
@@ -103,20 +85,6 @@
 }
 
 .nav-button:hover {
-    color: #FED13D;
-}
-
-/* Material Symbols */
-#dropdown-indicator {
-    display: flex;
-}
-
-.menu-dropdown {
-    font-size: 3em !important;
-    color: #EED6D5;
-}
-
-.menu-dropdown:hover {
     color: #FED13D;
     cursor: pointer;
 }

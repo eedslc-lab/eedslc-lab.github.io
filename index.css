@@ -144,12 +144,13 @@ section {
     display: flex;
     width: 25%;
     min-width: 8em;
-    color: #F2F1ED;
     align-items: center;
     justify-content: center;
+    color: #F2F1ED;
     font-family: "Merriweather-SemiBold";
     font-size: 2em;
     text-align: center;
+    text-decoration: none;
 }
 
 /* SERVICES */

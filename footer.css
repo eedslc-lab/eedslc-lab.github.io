@@ -33,7 +33,7 @@
     color: #F2EFED;
     box-sizing: border-box;
 
-    padding-bottom: 2em;
+    padding-bottom: em;
 }  
 #footer-logo-license-container {
     display: flex;
