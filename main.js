@@ -5,7 +5,7 @@ if (headerTitle) {
         // foer testing
         // window.location.href = "../home/index.html"; 
         // for website
-        window.location.href = "/index.html"; 
+        window.location.href = "/home/index.html"; 
 
     });
 }
