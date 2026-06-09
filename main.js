@@ -56,7 +56,8 @@ const projectImages = [
     "project5.jpg",
     "project6.jpg",
     "project7.jpg",
-    "project8.jpg"
+    "project8.jpg",
+    "project9.jng"
 ];
 
 const projectContainer = document.getElementById("project-card-container");
