@@ -2,7 +2,11 @@
 const headerTitle = document.getElementById("header-title");
 if (headerTitle) {
     headerTitle.addEventListener("click", () => {
-        window.location.href = "home/index.html";
+        // foer testing
+        // window.location.href = "../home/index.html"; 
+        // for website
+        window.location.href = "/index.html"; 
+
     });
 }
 
