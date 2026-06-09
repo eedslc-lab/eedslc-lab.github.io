@@ -47,3 +47,29 @@ document.querySelectorAll('.project-buttons').forEach(btn => {
         if (step >= steps) clearInterval(timer);
     }, duration / steps);
 });
+
+const projectImages = [
+    "project1.jpg",
+    "project2.jpg",
+    "project3.jpg",
+    "project4.jpg",
+    "project5.jpg",
+    "project6.jpg",
+    "project7.jpg",
+    "project8.jpg"
+];
+
+const projectContainer = document.getElementById("project-card-container");
+
+projectImages.forEach(image => {
+    const card = document.createElement("div");
+    card.classList.add("project-cards");
+
+    const img = document.createElement("img");
+    img.classList.add("project-card-image");
+    img.src = image;
+    img.alt = "Project Image";
+
+    card.appendChild(img);
+    projectContainer.appendChild(card);
+});
