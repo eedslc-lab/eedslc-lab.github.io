@@ -51,3 +51,7 @@ document.querySelectorAll('.project-buttons').forEach(btn => {
         if (step >= steps) clearInterval(timer);
     }, duration / steps);
 });
+
+if (window.location.href === "home/index.html") {
+    window.location.href = "/home/index.html"
+}
