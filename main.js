@@ -47,7 +47,6 @@ document.querySelectorAll('.project-buttons').forEach(btn => {
         if (step >= steps) clearInterval(timer);
     }, duration / steps);
 });
-
 const projectImages = [
     "project1.jpg",
     "project2.jpg",
@@ -59,6 +58,7 @@ const projectImages = [
     "project8.jpg",
     "project9.jng"
 ];
+
 
 const projectContainer = document.getElementById("project-card-container");
 

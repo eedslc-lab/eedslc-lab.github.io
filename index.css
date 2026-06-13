@@ -71,10 +71,12 @@ section {
     display: flex;
     flex-direction: column;
     color: #253031;
-    font-size: 1.5em;
-    line-height: 1.45em;
+    font-size: 1.4em;
+    line-height: 1.35em;
+    letter-spacing: 1%;
+    word-spacing: 3%;
     padding: 1em;
-    font-family: "Merriweather-Light";
+    font-family: "Merriweather";
     gap: 0.5em;
 }
 
@@ -85,10 +87,6 @@ section {
 
 .contact-button:hover {
     color: #F37B18;
-}
-
-#contact-form-title {
-    font-size: .8em;
 }
 
 #service-proj-container {
