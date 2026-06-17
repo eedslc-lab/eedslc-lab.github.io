@@ -61,7 +61,6 @@ const serviceImages = [
     
 
 ]
-while(project-)
 
 const projectContainer = document.getElementById("project-card-container");
 
