@@ -14,82 +14,98 @@
     font-family: 'Merriweather-Light';
     src: url('Merriweather_Sans/static/MerriweatherSans-Light.ttf');
 }
+
 #footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 10em;
-    /* min-height: 20vh; */
-    background-color: #253031;
+    background-color: var(--background-color-1);
 }
+
 #footer-info-container {
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 2em;
-    color: #F2EFED;
+    color: var(--color-2);
     box-sizing: border-box;
+    padding-top: 1.5em;
+    padding-bottom: .5em;
+}
 
-    padding-bottom: em;
-}  
-#footer-logo-license-container {
+#footer-location-contact-container {
     display: flex;
+    width: 44%;
+    gap: 1em;
+    justify-content: flex-start;
+    padding-left: 1%;
+}
+
+#footer-license-container {
+    display: flex;
+    width: 56%;
+    height: 100%;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 1em;    
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1em;
+    letter-spacing: 4%;
+    word-spacing: 2%;
+    line-height: 150%;
+    box-sizing: border-box;
+    padding-right: .5%;
 }
-#footer-license {
-    font-family: "Merriweather-Light";
-    font-size: 1.3em;
-    letter-spacing: .08em;
-}
+
 .footer-info-containers {
     display: flex;
     width: auto;
     height: 80%;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
-}
-.footer-titles {
-    font-size: 2em;
-    letter-spacing: 0.03em;
-    width: fit-content;
-    font-family: "Meriweather-Bold";
-    line-height: 95%;
-}
-.footer-title-underlines {
-    display: flex;
-    background-color: #F37B18;
-    height: .1em;
-    border-radius: .08em;
-}
-.footer-info {
-    display: flex;
-    font-family: "Merriweather-Light";
-    font-size: 1.3em;
-    flex-direction: column;
-    justify-content: flex-start;
-    letter-spacing: .1em;
-    width: fit-content;
-    max-width: 18em;
-    line-height: 1.9em;
-}   
-.footer-navigation-buttons {
-    text-decoration: none;
-    color: #F2EFED;
-    width: auto;
-    z-index: 8;
+    gap: .5em;
 }
 
-.footer-navigation-buttons:hover{
-    text-decoration: underline solid #F37B18 .15em;
+.copy-license {
+    display: flex;
+    font-family: "Merriweather-Light";
+}
+
+#copyright-symbol {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-titles {
+    width: fit-content;
+    font-family: "Merriweather-Light";
+    color: var(--color-1);
+    font-size: 1.4em;
+    letter-spacing: 4%;
+    line-height: 95%;
+}
+
+.footer-info {
+    display: flex;
+    width: fit-content;
+    max-width: 18em;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Merriweather-Light";
+    font-size: 1em;
+    letter-spacing: 3%;
+    word-spacing: 2%;
+    line-height: 150%;
+}
+
+.footer-navigation-buttons {
+    text-decoration: none;
+    color: var(--color-2);
+    width: auto;
+}
+
+.footer-navigation-buttons:hover {
+    text-decoration: underline solid var(--color-1) .15em;
     text-underline-offset: .2em;
     text-decoration-skip-ink: none;
-}
-#copyright {
-    font-family: "Merriweather-Regular";
 }

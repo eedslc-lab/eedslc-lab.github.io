@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <script src="image.js" defer></script>
+    <link rel="stylesheet" href="image.css"/>
+    <head>
+        <title>Image</title>
+    </head>
+    <body>
+        <div id="fixed-menu">
+            <div id="navigation-container">
+                <div class="navigation" id="navigation-home">Home</div>
+                <div id="navigation-header">Image Page</div>
+                <div class="navigation" id="navigation-gallery">Gallery</div>
+            </div>
+            <div id="themes-container">
+                <div class="themes">
+                    <label><input type="radio" name="theme-button" id="classy-theme"></input>Classy </label>
+                </div>
+                <div class="themes">
+                    <label><input type="radio" name="theme-button" id="earthy-theme"></input>Earthy </label>
+                </div>
+                <div class="themes">
+                    <label><input type="radio" name="theme-button" id="punk-theme"></input>Punk </label>
+                </div>
+            </div>
+        <div id="image-information-container">
+            <div id="info-container>">
+                <div id="category"></div>
+                <div id="date"></div>
+            </div>
+            <div id="image-button-container">
+                <input type="button" value="Unfavorite" id="unfavorite-button"/>
+                <input type="button" value="Back" id="back-button"/>
+            </div>
+        </div>
+        </div>
+        <div id="image-container">
+            <img id="single-image"></img>
+        </div>
+    </body>
+</html>

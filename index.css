@@ -20,10 +20,9 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden;
-    background-color: #253031;
+    background-color: var(--background-color-1);
 }
 
 section {
@@ -32,46 +31,44 @@ section {
 
 /* HOME */
 #home {
-    height: 100vh;
     box-sizing: border-box;
-    background-color: #253031;
+    background-color: var(--background-color-1);
     display: flex;
     flex-direction: column;
+    padding-top: 6.5%;
 }
 
 #home-container {
     display: flex;
     width: 100%;
-    height: 100%;
     position: relative;
-    top: 13%;
     flex-direction: column;
 }
 
 #about-img-container {
     display: flex;
     width: 100%;
-    height: 55vh;
+    height: 66vh;
     justify-content: space-between;
-    background-color: #FED13D;
+    background-color: var(--highlight-color-1);
 }
 
 #home-background-image {
-    width: 44vw;
+    width: 56%;
     object-fit: cover;
 }
 
 #about-container {
     display: flex;
-    background-color: #F2F1ED;
-    width: 56vw;
+    background-color: var(--background-color-2);
+    width: 44%;
 }
 
 #about-liner {
     display: flex;
     flex-direction: column;
-    color: #253031;
-    font-size: 1.4em;
+    color: var(--background-color-1);
+    font-size: 1.3em;
     line-height: 135%;
     letter-spacing: 1%;
     word-spacing: 3%;
@@ -82,247 +79,83 @@ section {
 
 .contact-button {
     text-decoration: none;
-    color: #253031;
+    color: var(--background-color-1);
 }
 
 .contact-button:hover {
-    color: #F37B18;
+    color: var(--color-1);
+}
+
+#bottom-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-color-1);
 }
 
 #service-proj-container {
     display: flex;
-    height: auto;
-    min-height: 15vh;
-    background-color: #253031;
-    padding: .5em 0em;
+    width: 100%;
     align-items: center;
+    padding: .5em 0;
 }
 
 #service-box {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 56%;
+    justify-content: flex-start;
+    width: 56%;              /* matches #about-container */
     flex-wrap: wrap;
-    column-gap: 1em;
+    column-gap: .6em;
     row-gap: .5em;
-    padding: .5em;
+    padding: 0 0 0 1%;
 }
 
 .service-buttons {
-    background-color: #F37B18;
-    border-radius: 1em;
+    background-color: var(--color-1);
+    border-radius: .1em;
     height: auto;
-    padding: .6em 1em;
+    padding: .2em .4em;
     text-decoration: none;
-    color: #F2F1ED;
+    color: var(--background-color-1);
     font-family: "Merriweather-SemiBold";
-    font-size: .9em;
+    font-size: .89em;
+    letter-spacing: 5%;
+    word-spacing: 3%;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.4s ease;
 }
 
 .service-buttons:hover {
-    background-color: #FED13D;
-    color: #253031;
+    background-color: var(--highlight-color-1);
+    color: var(--background-color-1);
 }
 
 #project-box {
     display: flex;
+    flex-direction: row;
     box-sizing: border-box;
     align-items: center;
-    justify-content: space-evenly;
-    width: 44%;
-    gap: 1em;
-    padding: .5em;
+    justify-content: space-between;
+    width: 44%;              /* matches #home-background-image */
+    gap: .5em;
+    padding: .5%;
     flex-wrap: wrap;
-
 }
 
 .project-buttons {
     display: flex;
-    width: 25%;
-    min-width: 8em;
+    width: 32%;
     align-items: center;
     justify-content: center;
-    color: #F2F1ED;
+    color: var(--color-2);
     font-family: "Merriweather-SemiBold";
-    font-size: 2em;
+    font-size: 1.3em;
+    letter-spacing: 7%;
     text-align: center;
     text-decoration: none;
 }
+
 #completed-projects-button:hover {
-    color: #F37B18;
-}
-
-/* SERVICES */
-#service-info {
-    display: flex;
-    width: fit-content;
-    max-width: 90%;
-    margin: 1em 0em;
-    font-size: 1.3em;
-    font-family: "Merriweather-Light";
-    text-align: start;
-    line-height: 125%;
-    gap: 1.2em;
-}
-
-.service-info-boxes {
-    border-radius: .5em;
-    width: 27em;
-    background-color: #F37B18;
-    padding: 1em;
-    box-shadow: .0em .0em .2em .006em #6d7071;
-}
-
-#service-nav-button-box {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-#service-nav-button {
-    background-color: #253031;
-    color: #F2F1ED;
-    padding: .3em;
-    font-size: 2em;
-    text-decoration: none;
-    border-radius: .4em;
-    box-shadow: .0em .0em .2em .006em #6d7071;
-    width: 5em;
-}
-
-#service-nav-button:hover {
-    background-color: #F37B18;
-    color: #f2f2f2;
-}
-
-/* PROJECTS */
-#project-card-container {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 1.7em;
-    margin-top: 1em;
-    flex-wrap: wrap;
-    height: auto;
-}
-
-.project-cards {
-    display: flex;
-    width: 20em;
-    height: 18em;
-    padding: 1em;
-    background-color: #253031;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1em;
-    position: relative;
-    transition: padding 1s ease-in-out;
-    box-shadow: .0em .0em .2em .006em #6d7071;
-}
-
-.project-image-overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-color: #F37B18;
-    color: #F2F1ED;
-    font-size: 3em;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.project-card-image {
-    display: flex;
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-    border-radius: inherit;
-    transition: opacity 1s ease-in-out;
-}
-
-.project-cards:hover .project-card-image {
-    opacity: 0.3;
-}
-
-.project-cards:hover .project-image-overlay {
-    opacity: 0.6;
-}
-
-/* About */
-#about-info-box {
-    display: flex;
-    width: auto;
-    max-width: 90%;
-    height: auto;
-    margin: 1em auto;
-    font-size: 1.3em;
-    font-family: "Merriweather-Light";
-    justify-content: center;
-    line-height: 125%;
-    gap: 1.2em;
-}
-
-.about-info {
-    display: flex;
-    justify-content: flex-start;
-    padding: 1em;
-    border-radius: .8em;
-    background-color: #F37B18;
-    box-shadow: .0em .0em .2em .006em #6d7071;
-}
-
-/* Sections */
-.info-sections {
-    display: flex;
-    box-sizing: border-box;
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #F2F1ED;
-}
-
-.info-section-boxes {
-    min-height: 50vh;
-    width: 77em;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2em 0em 2em;
-}
-
-.info-section-box-boxes {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.title-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-}
-
-.section-titles {
-    color: #253031;
-    width: fit-content;
-    font-size: 3em;
-    font-family: "Merriweather-Bold";
-    line-height: 95%;
-}
-
-.section-title-underlines {
-    display: flex;
-    width: 100%;
-    height: .19em;
-    background-color: #F37B18;
-    border-radius: .07em;
+    color: var(--color-1);
 }

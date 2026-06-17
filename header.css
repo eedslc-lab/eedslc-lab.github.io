@@ -14,11 +14,12 @@
     font-family: 'Merriweather-Light';
     src: url('Merriweather_Sans/static/MerriweatherSans-Light.ttf');
 }
+ 
 
 /* NAVBAR */
 #navigation-header-container {
     display: flex;
-    background-color: #253031;
+    background-color: var(--background-color-1);
     width: 100%;
     height: 13%;
     position: fixed;
@@ -30,7 +31,7 @@
 
 #nav-header-image-title-container {
     display: flex;
-    width: 56vw;
+    width: 56%;
     min-width: 20em;
     height: 100%;
     gap: 1em;
@@ -51,8 +52,11 @@
 
 #header-title {
     font-size: 3.4em;
+    letter-spacing: 2%;
+    word-spacing: 3%;
+    line-height: 90%;
     font-family: "Merriweather-SemiBold";
-    color: #F2F1ED;
+    color: var(--color-2);
     cursor: pointer;
 }
 
@@ -76,15 +80,19 @@
 }
 
 .nav-button {
-    font-family: "Merriweather-SemiBold";
-    color: #F2F1ED;
-    word-spacing: .3em;
+    font-family: "Merriweather";
+    color: var(--color-1);
+    letter-spacing: 5%;
     text-decoration: none;
     padding: .5em 0em;
-    font-size: 1em;
+    font-size: 130%;
+}
+
+#quote-nav {
+    font-size: 100%;
 }
 
 .nav-button:hover {
-    color: #FED13D;
+    color: var(--highlight-color-1);
     cursor: pointer;
 }

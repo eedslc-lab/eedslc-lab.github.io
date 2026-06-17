@@ -25,8 +25,7 @@ document.querySelectorAll('.service-cards').forEach(card => {
     });
 });
 
-// Service buttons — navigate to their page by href, no JS needed
-// (buttons are now <a> tags in the updated index.html)
+
 
 // Count-up animation for project stat boxes
 document.querySelectorAll('.project-buttons').forEach(btn => {
@@ -58,7 +57,11 @@ const projectImages = [
     "project8.jpg",
     "project9.jng"
 ];
+const serviceImages = [
+    
 
+]
+while(project-)
 
 const projectContainer = document.getElementById("project-card-container");
 
@@ -74,3 +77,19 @@ projectImages.forEach(image => {
     card.appendChild(img);
     projectContainer.appendChild(card);
 });
+
+const serviceContainer = document.getElementById("service-card-container");
+
+serviceImages.forEach(image => {
+    const card = document.createElement("div");
+    card.classList.add("service-cards");
+
+    const img = document.createElement("img");
+    img.classList.add("service-card-image");
+    img.src = image;
+    img.alt = "Service Image";
+
+    card.appendChild(img);
+    serviceContainerContainer.appendChild(card);
+});
+
