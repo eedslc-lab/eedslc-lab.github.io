@@ -27,6 +27,8 @@
     align-items: center;
     z-index: 99;
     box-shadow: 0em 0em .2em .02em #101515;
+    padding: 0 1%;          /* add symmetric side padding */
+    box-sizing: border-box;
 }
 
 #nav-header-image-title-container {
@@ -35,8 +37,9 @@
     min-width: 20em;
     height: 100%;
     gap: 1em;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    /* no left-only padding here */
 }
 
 #header-image-container {
@@ -62,7 +65,7 @@
 
 #nav-header-nav-container {
     display: flex;
-    padding: 0 1em;
+
     height: 100%;
     align-items: center;
 }

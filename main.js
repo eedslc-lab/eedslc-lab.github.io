@@ -13,6 +13,13 @@ if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
         navMenu.classList.toggle('open');
     });
+
+    // Close menu when a link is tapped
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+        });
+    });
 }
 
 // Service card flip on hover
@@ -24,8 +31,6 @@ document.querySelectorAll('.service-cards').forEach(card => {
         card.classList.remove('flipped');
     });
 });
-
-
 
 // Count-up animation for project stat boxes
 document.querySelectorAll('.project-buttons').forEach(btn => {
@@ -46,49 +51,3 @@ document.querySelectorAll('.project-buttons').forEach(btn => {
         if (step >= steps) clearInterval(timer);
     }, duration / steps);
 });
-const projectImages = [
-    "project1.jpg",
-    "project2.jpg",
-    "project3.jpg",
-    "project4.jpg",
-    "project5.jpg",
-    "project6.jpg",
-    "project7.jpg",
-    "project8.jpg",
-    "project9.jng"
-];
-const serviceImages = [
-    
-
-]
-
-const projectContainer = document.getElementById("project-card-container");
-
-projectImages.forEach(image => {
-    const card = document.createElement("div");
-    card.classList.add("project-cards");
-
-    const img = document.createElement("img");
-    img.classList.add("project-card-image");
-    img.src = image;
-    img.alt = "Project Image";
-
-    card.appendChild(img);
-    projectContainer.appendChild(card);
-});
-
-const serviceContainer = document.getElementById("service-card-container");
-
-serviceImages.forEach(image => {
-    const card = document.createElement("div");
-    card.classList.add("service-cards");
-
-    const img = document.createElement("img");
-    img.classList.add("service-card-image");
-    img.src = image;
-    img.alt = "Service Image";
-
-    card.appendChild(img);
-    serviceContainerContainer.appendChild(card);
-});
-

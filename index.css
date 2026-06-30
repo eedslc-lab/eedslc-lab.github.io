@@ -48,7 +48,7 @@ section {
 #about-img-container {
     display: flex;
     width: 100%;
-    height: 66vh;
+    height: 63vh;
     justify-content: space-between;
     background-color: var(--highlight-color-1);
 }
@@ -97,18 +97,20 @@ section {
     display: flex;
     width: 100%;
     align-items: center;
-    padding: .5em 0;
+    padding: 1%;       /* symmetric left/right instead of just top/bottom */
+    box-sizing: border-box;
 }
+
 
 #service-box {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 56%;              /* matches #about-container */
+    width: 45%;
     flex-wrap: wrap;
     column-gap: .6em;
     row-gap: .5em;
-    padding: 0 0 0 1%;
+    /* remove padding: 0 0 0 1% — now inherited evenly from parent */
 }
 
 .service-buttons {
@@ -137,9 +139,8 @@ section {
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
-    width: 44%;              /* matches #home-background-image */
+    width: 55%;
     gap: .5em;
-    padding: .5%;
     flex-wrap: wrap;
 }
 
@@ -147,12 +148,11 @@ section {
     display: flex;
     width: 32%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     color: var(--color-2);
     font-family: "Merriweather-SemiBold";
     font-size: 1.3em;
     letter-spacing: 7%;
-    text-align: center;
     text-decoration: none;
 }
 

@@ -1,0 +1,192 @@
+/* ============================================
+   MOBILE STYLES
+   Breakpoint: 768px and below
+   Link this AFTER header.css, index.css, footer.css
+   so these rules override the desktop styles.
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    /* ---------- HEADER ---------- */
+    #navigation-header-container {
+        height: auto;
+        padding: .8em 4%;
+        flex-wrap: wrap;
+    }
+
+    #nav-header-image-title-container {
+        width: auto;
+        min-width: 0;
+        gap: .6em;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    #header-image {
+        width: 3em;
+    }
+
+    #header-title {
+        font-size: 1.4em;
+        line-height: 100%;
+    }
+
+    #nav-header-nav-container {
+        padding: 0;
+        height: auto;
+    }
+
+    #header-nav-container {
+        gap: 0;
+    }
+
+    /* Hamburger icon — hidden on desktop, shown here */
+    #dropdown-indicator {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .menu-dropdown {
+        font-size: 2em !important;
+    }
+
+    /* Nav links collapse into a dropdown panel */
+    #navigation-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background-color: var(--background-color-1);
+        padding: 1em 4%;
+        box-shadow: 0em .3em .3em rgba(0,0,0,.3);
+    }
+
+    #navigation-menu.open {
+        display: flex;
+    }
+
+    .nav-button {
+        width: 100%;
+        padding: .7em 0;
+        font-size: 1.2em;
+    }
+
+    /* ---------- HOME ---------- */
+    #home {
+        padding-top: 4.5em;
+    }
+
+    #about-img-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #home-background-image {
+        width: 100%;
+        height: 40vh;
+    }
+
+    #about-container {
+        width: 100%;
+    }
+
+    #about-liner {
+        font-size: 1em;
+        padding: 1.2em 4%;
+    }
+
+    /* ---------- SERVICE BUTTONS + PROJECT STATS ---------- */
+    #service-proj-container {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+
+    #service-box {
+        width: 100%;
+        justify-content: center;
+        padding: .5em 4%;
+        box-sizing: border-box;
+    }
+
+    .service-buttons {
+        font-size: 1em;
+    }
+
+    #project-box {
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 1em 4%;
+        box-sizing: border-box;
+    }
+
+    .project-buttons {
+        width: auto;
+        font-size: 1.1em;
+    }
+
+    /* ---------- FOOTER ---------- */
+    #footer-info-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5em;
+        padding: 1.5em 4%;
+    }
+
+    #footer-location-contact-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    #footer-license-container {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .footer-info {
+        max-width: none;
+    }
+
+    /* ---------- SERVICE / PROJECT DETAIL PAGES ---------- */
+    #service-container,
+    #projects-container {
+        padding: 1.5em 4% 3em;
+    }
+
+    #service-title,
+    #project-title {
+        font-size: 2em;
+    }
+
+    #service-card-container,
+    #project-card-container {
+        justify-content: center;
+    }
+
+    .service-cards,
+    .project-cards {
+        width: 100%;
+        max-width: 24em;
+        height: 13em;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 420px) {
+    #header-title {
+        font-size: 1.1em;
+    }
+
+    #about-liner {
+        font-size: .95em;
+    }
+
+    .service-buttons {
+        font-size: .9em;
+        padding: .3em .6em;
+    }
+}

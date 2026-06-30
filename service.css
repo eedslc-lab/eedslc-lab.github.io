@@ -1,18 +1,11 @@
-:root {
-    --background-color-1: #252525;
-    --background-color-2: #F2F1ED;
-    --color-1: #F37B18;
-    --color-2: #F2F1ED;
-    --highlight-color-1: #FED13D;
-    --shadow-color-1: #6d7071;
-}
+
 
 #services {
     display: flex;
     justify-content: center;
     background-color: var(--background-color-2);
     min-height: 100vh;
-    padding-top: 13%;
+    padding-top: 7%;
     box-sizing: border-box;
 }
 
