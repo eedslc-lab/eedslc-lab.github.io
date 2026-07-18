@@ -1,11 +1,5 @@
-/* ============================================
-   MOBILE STYLES
-   Breakpoint: 768px and below
-   Link this AFTER header.css, index.css, footer.css
-   so these rules override the desktop styles.
-   ============================================ */
 
-@media (max-width: 768px) {
+
 
     /* ---------- HEADER ---------- */
     #navigation-header-container {
@@ -173,10 +167,10 @@
         max-width: 24em;
         height: 13em;
     }
-}
 
-/* Extra-small phones */
-@media (max-width: 420px) {
+
+/* Extra-small phones
+
     #header-title {
         font-size: 1.1em;
     }
@@ -188,5 +182,5 @@
     .service-buttons {
         font-size: .9em;
         padding: .3em .6em;
-    }
-}
+    } */
+
