@@ -50,7 +50,6 @@
 
 #header-image {
     width: 5.5em;
-    height: auto;
 }
 
 #header-title {
@@ -65,7 +64,6 @@
 
 #nav-header-nav-container {
     display: flex;
-
     height: 100%;
     align-items: center;
 }
@@ -97,7 +95,7 @@
 }
 
 #quote-nav {
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .nav-button:hover {
