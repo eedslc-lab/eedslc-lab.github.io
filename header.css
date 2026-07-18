@@ -75,6 +75,11 @@
     gap: 3em;
     align-items: center;
 }
+/* hidden here, shown on mobile */
+#dropdown-indicator {
+        display: none;
+        cursor: pointer;
+    }
 
 #navigation-menu {
     display: flex;
