@@ -1,28 +1,30 @@
-
-
+@media screen and (max-width: 768px) {
 
     /* ---------- HEADER ---------- */
     #navigation-header-container {
-        height: 10%;
-        padding: 0 4%;
-        flex-wrap: wrap;
+        height: auto;
+        min-height: 4em;
+        padding: .5em 4%;
+        flex-wrap: nowrap;
         align-items: center;
+        position: fixed;
     }
 
     #nav-header-image-title-container {
         width: auto;
         min-width: 0;
+        flex: 1;
         gap: .6em;
         justify-content: flex-start;
         padding: 0;
     }
 
     #header-image {
-        width: 4.1em;
+        width: 3em;
     }
 
     #header-title {
-        font-size: 3em;
+        font-size: 1.6em;
         line-height: 100%;
     }
 
@@ -35,7 +37,6 @@
         gap: 0;
     }
 
-    /* Hamburger icon — hidden on desktop, shown here */
     #dropdown-indicator {
         display: flex;
         cursor: pointer;
@@ -43,21 +44,22 @@
     }
 
     .menu-dropdown {
-        font-size: 4em !important;
+        font-size: 2.5em !important;
     }
 
-    /* Nav links collapse into a dropdown panel */
     #navigation-menu {
         display: none;
         position: absolute;
         top: 100%;
         right: 0;
         left: 0;
-        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
         background-color: var(--background-color-1);
         padding: 0 4% .75em;
         box-shadow: 0em .3em .3em rgba(0,0,0,.3);
+        z-index: 98;
     }
 
     #navigation-menu.open {
@@ -73,10 +75,12 @@
     /* ---------- HOME ---------- */
     #home {
         padding-top: 4.5em;
+        height: auto;
+        min-height: 0;
     }
 
     #about-img-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
     }
 
@@ -121,6 +125,7 @@
     .project-buttons {
         width: auto;
         font-size: 1.1em;
+        justify-content: center;
     }
 
     /* ---------- FOOTER ---------- */
@@ -131,10 +136,12 @@
         gap: 1.5em;
         padding: 1.5em 4%;
     }
+
     .footer-info-containers {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
+
     #footer-location-contact-container {
         width: 100%;
         flex-direction: column;
@@ -143,7 +150,7 @@
 
     #footer-license-container {
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .footer-info {
@@ -151,9 +158,15 @@
     }
 
     /* ---------- SERVICE / PROJECT DETAIL PAGES ---------- */
+    #services,
+    #projects {
+        padding-top: 4.5em;
+    }
+
     #service-container,
     #projects-container {
         padding: 1.5em 4% 3em;
+        max-width: 100%;
     }
 
     #service-title,
@@ -164,6 +177,7 @@
     #service-card-container,
     #project-card-container {
         justify-content: center;
+        gap: 1em;
     }
 
     .service-cards,
@@ -172,12 +186,12 @@
         max-width: 24em;
         height: 13em;
     }
+}
 
-
-/* Extra-small phones
-
+/* Extra-small phones */
+@media screen and (max-width: 420px) {
     #header-title {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 
     #about-liner {
@@ -187,5 +201,5 @@
     .service-buttons {
         font-size: .9em;
         padding: .3em .6em;
-    } */
-
+    }
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="footer.css"/>
     <link rel="stylesheet" href="mobile.css"/>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Interior Demolition - Red Rock Demolition</title>
         <link rel="icon" type="image/jpeg" href="RedRockLogo.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200&icon_names=menu" />
@@ -21,10 +22,13 @@
             </div>
             <div id="nav-header-nav-container">
                 <div id="header-nav-container">
+                    <div id="dropdown-indicator">
+                        <span class="material-symbols-outlined menu-dropdown">menu</span>
+                    </div>
                     <div id="navigation-menu">
-                        <label><a id="home-nav" class="nav-button" href="index.html">HOME</a></label>
-                        <label><a id="projects-nav" class="nav-button" href="project.html">PROJECTS</a></label>
-                        <label><div class="nav-button"><a id="quote-nav" class="nav-button" href="tel:801-463-9142">801-463-9142</a></div></label>
+                        <label><a id="home-nav" class="nav-button" href="index.html">Home</a></label>
+                        <label><a id="projects-nav" class="nav-button" href="project.html">Projects</a></label>
+                        <label><a id="quote-nav" class="nav-button" href="tel:801-463-9142">801-463-9142</a></label>
                     </div>
                 </div>
             </div>
@@ -36,30 +40,30 @@
                     <div id="service-title-underline"></div>
                 </div>
                 <div id="service-info">Red Rock Demolition has a specialized team dedicated to interior demolition projects of all sizes — from small remodels to large-scale commercial jobs. Whether you need service during the day, at night, or over the weekend, our team is ready to meet your schedule and project demands. We take pride in delivering safe, clean, and efficient demolition services while ensuring every project is completed professionally and prepared for the next phase of construction.</div>
-                <div id="service-card-container">
-                    
-                </div>
+                <div id="service-card-container"></div>
             </div>
         </section>
 
         <section id="footer">
             <div id="footer-info-container">
-                <div class="footer-info-containers">
-                    <div class="footer-titles">Location<div class="footer-title-underlines"></div></div>
-                    <div class="footer-info">
-                        <a class="footer-navigation-buttons" target="_blank" href="https://www.google.com/maps/place/813+Gladiola+St,+Salt+Lake+City,+UT+84104">813 Gladiola St Salt Lake City UT 84104</a>
+                <div id="footer-location-contact-container">
+                    <div class="footer-info-containers">
+                        <div class="footer-titles">Location</div>
+                        <div class="footer-info">
+                            <a class="footer-navigation-buttons" target="_blank" href="https://www.google.com/maps/place/813+Gladiola+St,+Salt+Lake+City,+UT+84104">813 Gladiola St Salt Lake City UT 84104</a>
+                        </div>
+                    </div>
+                    <div class="footer-info-containers">
+                        <div class="footer-titles">Contact</div>
+                        <div class="footer-info">
+                            <a class="footer-navigation-buttons" href="tel:801-463-9142">801-463-9142</a>
+                            <a class="footer-navigation-buttons" href="mailto:kayc@redrockdemolition.com">kayc@redrockdemolition.com</a>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-info-containers">
-                    <div class="footer-titles">Contact<div class="footer-title-underlines"></div></div>
-                    <div class="footer-info">
-                        <a class="footer-navigation-buttons" href="tel:801-463-9142">801-463-9142</a>
-                        <a class="footer-navigation-buttons" href="mailto:kayc@redrockdemolition.com">kayc@redrockdemolition.com</a>
-                    </div>
-                </div>
-                <div class="footer-info-containers">
-                    <div id="footer-license">License: #9772385-5501</div>
-                    <div id="copyright">© 2016 by Red Rock Demolition</div>
+                <div id="footer-license-container" class="footer-info-containers">
+                    <div id="footer-license" class="copy-license">License: #9772385-5501</div>
+                    <div id="copyright" class="copy-license"><span id="copyright-symbol">©</span> 2016 by Red Rock Demolition</div>
                 </div>
             </div>
         </section>

@@ -1,11 +1,9 @@
-
-
 #projects {
     display: flex;
     justify-content: center;
     background-color: var(--background-color-2);
     min-height: 100vh;
-    padding-top: 7%;
+    padding-top: 5em;           /* matches header height */
     box-sizing: border-box;
 }
 
@@ -21,7 +19,7 @@
 #project-title {
     color: var(--background-color-1);
     width: fit-content;
-    font-size: 3em;
+    font-size: clamp(2em, 3vw, 3em);
     font-family: "Merriweather-Bold";
     line-height: 95%;
     margin-bottom: .2em;
@@ -36,7 +34,7 @@
 }
 
 #project-info {
-    font-size: 1.2em;
+    font-size: clamp(1em, 1.1vw, 1.2em);
     font-family: "Merriweather-Light";
     line-height: 1.6em;
     color: var(--background-color-1);
@@ -53,7 +51,7 @@
 }
 
 .project-cards {
-    width: 15em;
+    width: clamp(12em, 18%, 15em);
     height: 15em;
     border-radius: 1em;
     overflow: hidden;
