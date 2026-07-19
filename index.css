@@ -22,6 +22,7 @@ html, body {
     min-height: 100vh;
     box-sizing: border-box;
     background-color: var(--background-color-1);
+    overflow-x: hidden;
 }
 
 /* HOME */
@@ -43,7 +44,7 @@ html, body {
 #about-img-container {
     display: flex;
     width: 100%;
-    height: clamp(24em, 63vh, 48em);
+    height: clamp(26em, 65vh, 48em);
     justify-content: space-between;
     background-color: var(--highlight-color-1);
 }
@@ -63,8 +64,9 @@ html, body {
 #about-liner {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: var(--background-color-1);
-    font-size: clamp(1em, 1.38vw, 1.8em);
+    font-size: clamp(1em, 1.36vw, 1.8em);
     line-height: 140%;
     padding: 1em 1.2em;
     font-family: "Merriweather";
@@ -102,8 +104,8 @@ html, body {
     justify-content: flex-start;
     width: 44%;
     flex-wrap: wrap;
-    column-gap: .5em;
-    row-gap: .4em;
+    column-gap: .65em;
+    row-gap: .55em;
 }
 
 .service-buttons {
@@ -114,7 +116,7 @@ html, body {
     text-decoration: none;
     color: var(--background-color-1);
     font-family: "Merriweather-SemiBold";
-    font-size: clamp(.78em, .85vw, .92em);
+    font-size: clamp(.78em, 1vw, 1em);
     cursor: pointer;
     transition: background-color 0.4s ease;
     white-space: nowrap;
