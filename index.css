@@ -32,6 +32,7 @@ html, body {
     display: flex;
     flex-direction: column;
     padding-top: 5em;
+    height: 100vh;
 }
 
 #home-container {
@@ -39,12 +40,15 @@ html, body {
     width: 100%;
     position: relative;
     flex-direction: column;
+    flex: 1;
+    min-height: 0;
 }
 
 #about-img-container {
     display: flex;
     width: 100%;
-    height: clamp(26em, 65vh, 48em);
+    flex: 1;                    /* grow to fill home-container */
+    height: clamp(24em, 63vh, 48em);
     justify-content: space-between;
     background-color: var(--highlight-color-1);
 }
@@ -59,6 +63,8 @@ html, body {
     display: flex;
     background-color: var(--background-color-2);
     width: 44%;
+    overflow: hidden;
+    min-height: 0;
 }
 
 #about-liner {
@@ -66,11 +72,12 @@ html, body {
     flex-direction: column;
     justify-content: center;
     color: var(--background-color-1);
-    font-size: clamp(1em, 1.36vw, 1.8em);
+    font-size: clamp(1em, 1.38vw, 1.6em);
     line-height: 140%;
     padding: 1em 1.2em;
     font-family: "Merriweather";
     gap: 0.8em;
+    overflow-y: scroll;
 }
 
 .contact-button {
