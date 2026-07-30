@@ -16,7 +16,23 @@ const SERVICE_FOLDERS = {
     "spyder-crane": "images/service-images/spyder-crane",
     "concrete-grinding": "images/service-images/concrete-grinding",
     "saw-cutting": "images/service-images/saw-cutting",
-    "trash-chute": "images/service-images/trash-chute"
+    "trash-chute": "images/service-images/trash-chute",
+    "shoring": "images/service-images/shoring",
+    "structural-demo": "images/service-images/structural-demo"
+};
+
+// Human-readable labels used to build descriptive alt text for SEO/accessibility.
+const SERVICE_LABELS = {
+    "interior-demo": "Interior Demolition",
+    "exterior-demo": "Exterior Demolition",
+    "dry-ice": "Dry Ice Blasting",
+    "dxr-brokk": "DXR & BROKK Robotic Demolition",
+    "spyder-crane": "Spyder Crane",
+    "concrete-grinding": "Concrete Grinding & Shaving",
+    "saw-cutting": "Saw Cutting & Removal",
+    "trash-chute": "Trash Chute Rental",
+    "shoring": "Shoring",
+    "structural-demo": "Structural Demolition"
 };
 
 // Extensions to try for each photo number, in order.
@@ -56,15 +72,21 @@ async function collectPhotos(folder, maxCount = 200) {
     return found;
 }
 
-function renderCards(container, sources, cardClass, imageClass, altText) {
-    sources.forEach(src => {
+// altBase becomes e.g. "Red Rock Demolition Interior Demolition photo 1" —
+// descriptive, unique per image, and includes the business + service name
+// for image-search SEO. loading="lazy" defers offscreen gallery images so
+// they don't compete with the page's real Largest Contentful Paint image.
+function renderCards(container, sources, cardClass, imageClass, altBase) {
+    sources.forEach((src, i) => {
         const card = document.createElement("div");
         card.classList.add(cardClass);
 
         const img = document.createElement("img");
         img.classList.add(imageClass);
         img.src = src;
-        img.alt = altText;
+        img.alt = `${altBase} photo ${i + 1}`;
+        img.loading = "lazy";
+        img.decoding = "async";
 
         card.appendChild(img);
         container.appendChild(card);
@@ -77,7 +99,7 @@ async function initProjectImages() {
     if (!projectContainer) return;
 
     const sources = await collectPhotos(PROJECT_FOLDER);
-    renderCards(projectContainer, sources, "project-cards", "project-card-image", "Project Image");
+    renderCards(projectContainer, sources, "project-cards", "project-card-image", "Red Rock Demolition completed project");
 }
 
 // ---- RENDER SERVICE IMAGES (any service-*.html page) ----
@@ -90,8 +112,9 @@ async function initServiceImages() {
     const folder = SERVICE_FOLDERS[currentService];
     if (!folder) return;
 
+    const label = SERVICE_LABELS[currentService] || "service";
     const sources = await collectPhotos(folder);
-    renderCards(serviceContainer, sources, "service-cards", "service-card-image", "Service Image");
+    renderCards(serviceContainer, sources, "service-cards", "service-card-image", `Red Rock Demolition ${label}`);
 }
 
 initProjectImages();

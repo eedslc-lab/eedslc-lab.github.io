@@ -3,7 +3,7 @@
     justify-content: center;
     background-color: var(--background-color-2);
     min-height: 100vh;
-    padding-top: 5em;           /* matches header height */
+    padding-top: 5em;
     box-sizing: border-box;
 }
 
@@ -16,13 +16,16 @@
     padding: 2em 0em 4em;
 }
 
+/* #project-title is now an <h1>. Reset kills default h1 margin/font-weight
+   so it renders identically to the old <div>. */
 #project-title {
+    margin: 0 0 .2em 0;
+    font-weight: normal;
     color: var(--background-color-1);
     width: fit-content;
     font-size: clamp(2em, 3vw, 3em);
     font-family: "Merriweather-Bold";
     line-height: 95%;
-    margin-bottom: .2em;
 }
 
 #project-title-underline {

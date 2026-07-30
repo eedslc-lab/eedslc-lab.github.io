@@ -25,6 +25,22 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Accessible/SEO utility: keeps an element in the DOM (and readable by
+   screen readers and crawlers) but removes it from visual layout entirely.
+   Used for heading structure that supports page hierarchy without adding
+   any new visible text to the design. */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* HOME */
 #home {
     box-sizing: border-box;
@@ -47,7 +63,7 @@ html, body {
 #about-img-container {
     display: flex;
     width: 100%;
-    flex: 1;                    /* grow to fill home-container */
+    flex: 1;
     height: clamp(24em, 63vh, 48em);
     justify-content: space-between;
     background-color: var(--highlight-color-1);

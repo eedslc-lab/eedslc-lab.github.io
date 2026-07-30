@@ -31,14 +31,14 @@
     align-items: center;
     color: var(--color-2);
     box-sizing: border-box;
-    padding: 1%;  
+    padding: 1%;
 }
+
 #footer-location-contact-container {
     display: flex;
     width: 44%;
     gap: 1em;
     justify-content: flex-start;
-    /* remove padding-left: 1% — now inherited evenly from parent */
 }
 
 #footer-license-container {
@@ -53,7 +53,6 @@
     word-spacing: 2%;
     line-height: 150%;
     box-sizing: border-box;
-    /* remove padding-right: .5% — now inherited evenly from parent */
 }
 
 .footer-info-containers {

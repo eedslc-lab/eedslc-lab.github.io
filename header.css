@@ -36,7 +36,7 @@
     min-width: 20em;
     height: 100%;
     gap: 1em;
-    justify-content: flex-start;   /* logo left, title next to it */
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -52,7 +52,12 @@
     height: 98%;
 }
 
+/* #header-title is a <div> on interior pages and an <h1> on the homepage.
+   These resets neutralize the browser's default h1 margin/font-weight so it
+   renders identically either way. */
 #header-title {
+    margin: 0;
+    font-weight: normal;
     font-size: clamp(2em, 3.2vw, 3.4em);
     letter-spacing: .05em;
     word-spacing: .1em;
