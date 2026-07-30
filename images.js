@@ -1,27 +1,9 @@
 // images.js
-// Instead of hardcoding filenames, this tries to load photo1, photo2, photo3...
-// from each folder (checking .jpg, .jpeg, .png, .webp) and stops as soon as a
-// number has no matching file in any extension.
-//
-// Just drop files named photo1.jpg, photo2.png, photo3.jpeg, etc. into the
-// matching folder — no code changes needed when you add more.
+// Loads image paths from image_list.json and automatically renders
+// project and service image galleries.
 
-const PROJECT_FOLDER = "images/projects";
+const IMAGE_LIST = "image_list.json";
 
-const SERVICE_FOLDERS = {
-    "interior-demo": "images/service-images/interior-demo",
-    "exterior-demo": "images/service-images/exterior-demo",
-    "dry-ice": "images/service-images/dry-ice",
-    "dxr-brokk": "images/service-images/dxr-brokk",
-    "spyder-crane": "images/service-images/spyder-crane",
-    "concrete-grinding": "images/service-images/concrete-grinding",
-    "saw-cutting": "images/service-images/saw-cutting",
-    "trash-chute": "images/service-images/trash-chute",
-    "shoring": "images/service-images/shoring",
-    "structural-demo": "images/service-images/structural-demo"
-};
-
-// Human-readable labels used to build descriptive alt text for SEO/accessibility.
 const SERVICE_LABELS = {
     "interior-demo": "Interior Demolition",
     "exterior-demo": "Exterior Demolition",
@@ -35,47 +17,16 @@ const SERVICE_LABELS = {
     "structural-demo": "Structural Demolition"
 };
 
-// Extensions to try for each photo number, in order.
-const EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
-
-// Tries to load a single image URL. Resolves true/false, never rejects.
-function imageExists(src) {
-    return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = src;
-    });
-}
-
-// Tries photoN.jpg, photoN.jpeg, photoN.png, photoN.webp for a given N.
-// Returns the working src string, or null if none of them exist.
-async function findPhotoSrc(folder, number) {
-    for (const ext of EXTENSIONS) {
-        const src = `${folder}/photo${number}.${ext}`;
-        if (await imageExists(src)) {
-            return src;
-        }
+// Load the JSON file
+async function loadImages() {
+    const response = await fetch(IMAGE_LIST);
+    if (!response.ok) {
+        throw new Error(`Failed to load ${IMAGE_LIST}`);
     }
-    return null;
+    return await response.json();
 }
 
-// Walks photo1, photo2, photo3... until one is missing in every extension,
-// returns the list of found src strings. Caps at maxCount as a safety net.
-async function collectPhotos(folder, maxCount = 200) {
-    const found = [];
-    for (let i = 1; i <= maxCount; i++) {
-        const src = await findPhotoSrc(folder, i);
-        if (!src) break;
-        found.push(src);
-    }
-    return found;
-}
-
-// altBase becomes e.g. "Red Rock Demolition Interior Demolition photo 1" —
-// descriptive, unique per image, and includes the business + service name
-// for image-search SEO. loading="lazy" defers offscreen gallery images so
-// they don't compete with the page's real Largest Contentful Paint image.
+// Creates the image cards
 function renderCards(container, sources, cardClass, imageClass, altBase) {
     sources.forEach((src, i) => {
         const card = document.createElement("div");
@@ -83,7 +34,7 @@ function renderCards(container, sources, cardClass, imageClass, altBase) {
 
         const img = document.createElement("img");
         img.classList.add(imageClass);
-        img.src = src;
+        img.src = `images/${src}`;
         img.alt = `${altBase} photo ${i + 1}`;
         img.loading = "lazy";
         img.decoding = "async";
@@ -93,29 +44,55 @@ function renderCards(container, sources, cardClass, imageClass, altBase) {
     });
 }
 
-// ---- RENDER PROJECTS (project.html) ----
+// ---- PROJECT PAGE ----
 async function initProjectImages() {
-    const projectContainer = document.getElementById("project-card-container");
-    if (!projectContainer) return;
+    const container = document.getElementById("project-card-container");
+    if (!container) return;
 
-    const sources = await collectPhotos(PROJECT_FOLDER);
-    renderCards(projectContainer, sources, "project-cards", "project-card-image", "Red Rock Demolition completed project");
+    const images = await loadImages();
+
+    const projectImages = images.filter(path =>
+        path.startsWith("projects/")
+    );
+
+    renderCards(
+        container,
+        projectImages,
+        "project-cards",
+        "project-card-image",
+        "Red Rock Demolition completed project"
+    );
 }
 
-// ---- RENDER SERVICE IMAGES (any service-*.html page) ----
+// ---- SERVICE PAGES ----
 async function initServiceImages() {
-    const serviceContainer = document.getElementById("service-card-container");
-    if (!serviceContainer) return;
+    const container = document.getElementById("service-card-container");
+    if (!container) return;
 
-    // body needs data-service="interior-demo" (etc.) set in each service HTML file
     const currentService = document.body.dataset.service;
-    const folder = SERVICE_FOLDERS[currentService];
-    if (!folder) return;
+    if (!currentService) return;
 
-    const label = SERVICE_LABELS[currentService] || "service";
-    const sources = await collectPhotos(folder);
-    renderCards(serviceContainer, sources, "service-cards", "service-card-image", `Red Rock Demolition ${label}`);
+    const images = await loadImages();
+
+    const serviceImages = images.filter(path =>
+        path.startsWith(`service-images/${currentService}/`)
+    );
+
+    renderCards(
+        container,
+        serviceImages,
+        "service-cards",
+        "service-card-image",
+        `Red Rock Demolition ${SERVICE_LABELS[currentService] || "Service"}`
+    );
 }
 
-initProjectImages();
-initServiceImages();
+// Initialize whichever gallery exists on the page.
+(async () => {
+    try {
+        await initProjectImages();
+        await initServiceImages();
+    } catch (error) {
+        console.error(error);
+    }
+})();
