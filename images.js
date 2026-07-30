@@ -2,7 +2,7 @@
 // Loads image paths from image_list.json and automatically renders
 // project and service image galleries.
 
-const IMAGE_LIST = "image_list.json";
+const IMAGE_LIST = "images_list.json";
 
 const SERVICE_LABELS = {
     "interior-demo": "Interior Demolition",
