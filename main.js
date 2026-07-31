@@ -2,7 +2,8 @@
 const headerTitle = document.getElementById("header-title");
 if (headerTitle) {
     headerTitle.addEventListener("click", () => {
-        window.location.href = "https://www.redrockdemolition.com";
+        // window.location.href = "https://www.redrockdemolition.com";
+        window.location.href = "index.html";
     });
 }
 
@@ -39,7 +40,7 @@ document.querySelectorAll('.project-buttons').forEach(btn => {
 
     const prefix = btn.dataset.prefix || "";
     const suffix = btn.dataset.suffix || "";
-    const duration = 2000;
+    const duration = 4500;
     const steps = 60;
     const increment = target / steps;
     let step = 0;
