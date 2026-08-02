@@ -29,7 +29,7 @@
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-2);
+    color: var(--color-4);
     box-sizing: border-box;
     padding: 1%;
 }
@@ -48,7 +48,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    font-size: 1em;
+    font-size: .8em;
     letter-spacing: 4%;
     word-spacing: 2%;
     line-height: 150%;
@@ -89,7 +89,7 @@
     flex-direction: column;
     justify-content: flex-start;
     font-family: "Merriweather-Light";
-    font-size: 1em;
+    font-size: .8em;
     letter-spacing: 3%;
     word-spacing: 2%;
     line-height: 150%;
@@ -97,12 +97,12 @@
 
 .footer-navigation-buttons {
     text-decoration: none;
-    color: var(--color-2);
+    color: var(--color-4);
     width: auto;
 }
 
 .footer-navigation-buttons:hover {
-    text-decoration: underline solid var(--color-1) .15em;
+    text-decoration: underline solid var(--color-4) .15em;
     text-underline-offset: .2em;
     text-decoration-skip-ink: none;
 }

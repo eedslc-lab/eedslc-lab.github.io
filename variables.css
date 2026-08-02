@@ -1,8 +1,15 @@
 :root {
-    --background-color-1: #253031;
-    --background-color-2: #F2F1ED;
-    --color-1: #F37B18;
-    --color-2: #F2F1ED;
+    --background-color-1:  #253031;
+    --background-color-2: #CBC8BE;
+    --background-color-3: #CBC8BE;
+    --background-color-4: #;
+    --color-1: #C75D22;
+    --color-2: #253031;
+    --color-4: #F2F1ED;
+    --color-3: #C75D22;
     --highlight-color-1: #FED13D;
-    --shadow-color-1: #6d7071;
+    --shadow-color-1: #253031; 
 }
+/* Blackish 253031 */
+/* WhiteIsh F2F1ED */
+/* Orange 1 F37B18 */

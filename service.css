@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--background-color-2);
-    min-height: 100vh;
+    min-height: 85vh;
     padding-top: 5em;
     box-sizing: border-box;
 }
@@ -13,35 +13,46 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2em 0em 4em;
+    padding: 2em 0em 4em 2em;
 }
 
 /* #service-title is now an <h1>. This reset kills the browser's default
    h1 margin (all four sides) and font-weight so it renders pixel-identical
    to the old <div>. */
-#service-title {
+/* #service-title {
     margin: 0 0 .2em 0;
     font-weight: normal;
-    color: var(--background-color-1);
+    color: var(--color-1);
     width: fit-content;
     font-size: clamp(2em, 3vw, 3em);
     font-family: "Merriweather-Bold";
     line-height: 95%;
+} */
+#service-title {
+    background-color: var(--color-1);
+    border-radius: .1em;
+    height: auto;
+    padding: .25em .5em;
+    text-decoration: none;
+    color: var(--background-color-1);
+    font-family: "Merriweather-SemiBold";
+    font-size: clamp(.78em, 1vw, 1em);
+    white-space: nowrap;
 }
 
-#service-title-underline {
+/* #service-title-underline {
     display: flex;
     width: 100%;
     height: .1em;
     background-color: var(--color-1);
     border-radius: .07em;
-}
+} */
 
 #service-info {
     font-size: clamp(1em, 1.1vw, 1.2em);
     font-family: "Merriweather-Light";
     line-height: 1.6em;
-    color: var(--background-color-1);
+    color: var(--color-2);
     margin: 1em 0em 2em;
     max-width: 60em;
 }
