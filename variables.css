@@ -1,15 +1,59 @@
+
+/* Black Header White Body White Footer Orange buttons white text and black text */
 :root {
-    --background-color-1:  #253031;
-    --background-color-2: #CBC8BE;
-    --background-color-3: #CBC8BE;
-    --background-color-4: #;
-    --color-1: #C75D22;
-    --color-2: #253031;
-    --color-4: #F2F1ED;
-    --color-3: #C75D22;
     --highlight-color-1: #FED13D;
     --shadow-color-1: #253031; 
+
+    --header-background-color: #252323;
+    --header-color: #C75D22;
+    --header-highlight-color: var(--highlight-color-1);
+
+    --about-background-color: #CBC8BE;
+    --about-color: #252323;
+
+    --service-project-background-color: #CBC8BE;
+    
+    --service-button-background-color: #C75D22;
+    --service-button-color: #CBC8BE;
+    --service-button-highlight-color-1: var(--highlight-color-1);
+    --service-button-highlight-color-2: #252323;
+
+    --project-button-color: #C75D22;
+    --project-button-highlight-color: var(--highlight-color-1);
+
+    --footer-background-color: #CBC8BE;
+    --footer-color-1: #C75D22;
+    --footer-color-2: #252323;
 }
-/* Blackish 253031 */
-/* WhiteIsh F2F1ED */
-/* Orange 1 F37B18 */
+/* ColorScheme Title */
+/* :root {
+    --highlight-color-1: #FED13D;
+    --shadow-color-1: #253031; 
+
+    --header-background-color: #252323;
+    --header-color: #C75D22;
+    --header-highlight-color: var(--highlight-color-1);
+
+    --about-background-color: #CBC8BE;
+    --about-color: #252323;
+
+    --service-project-background-color: #CBC8BE;
+    
+    --service-button-background-color: #C75D22;
+    --service-button-color: #CBC8BE;
+    --service-button-highlight-color-1: var(--highlight-color-1);
+    --service-button-highlight-color-2: #252323;
+
+    --project-button-color: #C75D22;
+    --project-button-highlight-color: var(--highlight-color-1);
+
+    --footer-background-color: #CBC8BE;
+    --footer-color-1: #C75D22;
+    --footer-color-2: #252323;
+} */
+
+/* Blue Black  #253031*/
+/* Warm Black #252323*/
+/* Orange #C75D22*/
+/* White-ish #CBC8BE*/
+/* Yellow #FED13D*/

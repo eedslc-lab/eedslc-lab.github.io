@@ -21,8 +21,8 @@ html, body {
     padding: 0;
     min-height: 100vh;
     box-sizing: border-box;
-    background-color: var(--background-color-1);
     overflow-x: hidden;
+    background-color: var(--about-background-color);
 }
 
 /* Accessible/SEO utility: keeps an element in the DOM (and readable by
@@ -44,7 +44,6 @@ html, body {
 /* HOME */
 #home {
     box-sizing: border-box;
-    background-color: var(--background-color-1);
     display: flex;
     flex-direction: column;
     padding-top: 5em;
@@ -66,7 +65,7 @@ html, body {
     flex: 1;
     height: clamp(24em, 63vh, 48em);
     justify-content: space-between;
-    background-color: var(--background-color-1);
+    background-color: var(--about-background-color);
 }
 
 #home-background-image {
@@ -77,7 +76,6 @@ html, body {
 
 #about-container {
     display: flex;
-    background-color: var(--background-color-2);
     width: 44%;
     overflow: hidden;
     min-height: 0;
@@ -87,7 +85,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--color-2);
+    color: var(--about-color);
     font-size: clamp(1em, 1.38vw, 1.6em);
     line-height: 125%;
     padding: 1em 1.2em;
@@ -95,20 +93,12 @@ html, body {
     font-family: "Merriweather-Light";
     overflow-y: scroll;
 }
-.contact-button {
-    text-decoration: none;
-    color: var(--color-1);
-}
-
-.contact-button:hover {
-    color: var(--color-1);
-}
 
 #bottom-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: var(--background-color-1);
+    background-color: var(--service-project-background-color);
 }
 
 #service-proj-container {
@@ -126,17 +116,17 @@ html, body {
     justify-content: flex-start;
     width: 44%;
     flex-wrap: wrap;
-    column-gap: .65em;
+    column-gap: .6em;
     row-gap: .55em;
 }
 
 .service-buttons {
-    background-color: var(--color-1);
+    background-color: var(--service-button-background-color);
+    color: var(--service-button-color);
     border-radius: .1em;
     height: auto;
     padding: .25em .5em;
     text-decoration: none;
-    color: var(--background-color-1);
     font-family: "Merriweather-SemiBold";
     font-size: clamp(.78em, 1vw, 1em);
     cursor: pointer;
@@ -145,8 +135,8 @@ html, body {
 }
 
 .service-buttons:hover {
-    background-color: var(--highlight-color-1);
-    color: var(--background-color-1);
+    background-color: var(--service-button-highlight-color-1);
+    color: var(--service-button-highlight-color-2);
 }
 
 #project-box {
@@ -163,7 +153,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-4);
+    color: var(--project-button-color);
     font-family: "Merriweather-SemiBold";
     font-size: clamp(1em, 1.3vw, 1.5em);
     text-decoration: none;
@@ -172,5 +162,5 @@ html, body {
 }
 
 #completed-projects-button:hover {
-    color: var(--color-1);
+    color: var(--project-button-highlight-color);
 }

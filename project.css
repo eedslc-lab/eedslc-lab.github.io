@@ -1,8 +1,8 @@
 #projects {
     display: flex;
     justify-content: center;
-    background-color: var(--background-color-2);
-    min-height: 100vh;
+    background-color: var(--service-project-background-color);
+    min-height: 89vh;
     padding-top: 5em;
     box-sizing: border-box;
 }
@@ -16,12 +16,10 @@
     padding: 2em 0em 4em;
 }
 
-/* #project-title is now an <h1>. Reset kills default h1 margin/font-weight
-   so it renders identically to the old <div>. */
 #project-title {
     margin: 0 0 .2em 0;
     font-weight: normal;
-    color: var(--background-color-1);
+    color: var(--about-color);
     width: fit-content;
     font-size: clamp(2em, 3vw, 3em);
     font-family: "Merriweather-Bold";
@@ -32,7 +30,7 @@
     display: flex;
     width: 100%;
     height: .1em;
-    background-color: var(--color-1);
+    background-color: var(--project-button-color);
     border-radius: .07em;
 }
 
@@ -40,7 +38,7 @@
     font-size: clamp(1em, 1.1vw, 1.2em);
     font-family: "Merriweather-Light";
     line-height: 1.6em;
-    color: var(--background-color-1);
+    color: var(--about-color);
     margin: 1em 0em 2em;
     max-width: 60em;
 }
@@ -58,16 +56,11 @@
     height: 15em;
     border-radius: 1em;
     overflow: hidden;
-    background-color: var(--background-color-1);
+    background-color: var(--header-background-color);
     box-shadow: 0em 0em .2em .006em var(--shadow-color-1);
 }
 
-.project-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+.project-card-image,
 .project-card-video {
     width: 100%;
     height: 100%;

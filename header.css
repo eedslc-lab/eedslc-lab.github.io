@@ -18,7 +18,7 @@
 /* NAVBAR */
 #navigation-header-container {
     display: flex;
-    background-color: var(--background-color-1);
+    background-color: var(--header-background-color);
     width: 100%;
     height: 5.5em;
     position: fixed;
@@ -63,7 +63,7 @@
     word-spacing: .1em;
     line-height: 90%;
     font-family: "Merriweather-SemiBold";
-    color: var(--color-1);
+    color: var(--header-color);
     cursor: pointer;
     white-space: nowrap;
 }
@@ -95,7 +95,7 @@
 
 .nav-button {
     font-family: "Merriweather";
-    color: var(--color-1);
+    color: var(--header-color);
     letter-spacing: .05em;
     text-decoration: none;
     padding: .5em 0em;
@@ -108,6 +108,6 @@
 }
 
 .nav-button:hover {
-    color: var(--highlight-color-1);
+    color: var(--header-highlight-color);
     cursor: pointer;
 }

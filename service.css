@@ -1,8 +1,8 @@
 #services {
     display: flex;
     justify-content: center;
-    background-color: var(--background-color-2);
-    min-height: 85vh;
+    background-color: var(--service-project-background-color);
+    min-height: 89vh;
     padding-top: 5em;
     box-sizing: border-box;
 }
@@ -16,43 +16,23 @@
     padding: 2em 0em 4em 2em;
 }
 
-/* #service-title is now an <h1>. This reset kills the browser's default
-   h1 margin (all four sides) and font-weight so it renders pixel-identical
-   to the old <div>. */
-/* #service-title {
-    margin: 0 0 .2em 0;
-    font-weight: normal;
-    color: var(--color-1);
-    width: fit-content;
-    font-size: clamp(2em, 3vw, 3em);
-    font-family: "Merriweather-Bold";
-    line-height: 95%;
-} */
 #service-title {
-    background-color: var(--color-1);
+    background-color: var(--service-button-background-color);
     border-radius: .1em;
     height: auto;
     padding: .25em .5em;
     text-decoration: none;
-    color: var(--background-color-1);
+    color: var(--service-button-color);
     font-family: "Merriweather-SemiBold";
     font-size: clamp(.78em, 1vw, 1em);
     white-space: nowrap;
 }
 
-/* #service-title-underline {
-    display: flex;
-    width: 100%;
-    height: .1em;
-    background-color: var(--color-1);
-    border-radius: .07em;
-} */
-
 #service-info {
     font-size: clamp(1em, 1.1vw, 1.2em);
     font-family: "Merriweather-Light";
     line-height: 1.6em;
-    color: var(--color-2);
+    color: var(--about-color);
     margin: 1em 0em 2em;
     max-width: 60em;
 }
@@ -69,16 +49,11 @@
     height: 15em;
     border-radius: 1em;
     overflow: hidden;
-    background-color: var(--background-color-1);
+    background-color: var(--header-background-color);
     box-shadow: 0em 0em .2em .006em var(--shadow-color-1);
 }
 
-.service-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+.service-card-image,
 .service-card-video {
     width: 100%;
     height: 100%;
