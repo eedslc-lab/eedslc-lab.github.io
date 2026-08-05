@@ -8,55 +8,87 @@
 }
 
 #service-container {
-    width: 77em;
-    max-width: 90%;
+    width: min(90%, 1400px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2em 0em 4em 2em;
+    padding: 2em 0 4em;
 }
 
 #service-title {
+    display: inline-block;
     background-color: var(--service-button-background-color);
-    border-radius: .1em;
-    height: auto;
-    padding: .25em .5em;
-    text-decoration: none;
     color: var(--service-button-color);
+    padding: .35em .75em;
+    border-radius: .2em;
     font-family: "Merriweather-SemiBold";
-    font-size: clamp(.78em, 1vw, 1em);
-    white-space: nowrap;
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    line-height: 1.2;
+    margin: 0;
 }
 
-#service-info {
+#service-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: 100%;
+    margin: 2em 0 3em;
+}
+
+.service-info {
+    flex: 1 1 22rem;
+    max-width: 30rem;
     font-size: clamp(1em, 1.1vw, 1.2em);
     font-family: "Merriweather-Light";
-    line-height: 1.6em;
+    line-height: 1.6;
     color: var(--about-color);
-    margin: 1em 0em 2em;
-    max-width: 60em;
+    margin: 0;
 }
 
 #service-card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5em;
+    gap: 2em;
     width: 100%;
+    justify-content: flex-start;
 }
 
 .service-cards {
-    width: clamp(14em, 20%, 20em);
-    height: 15em;
+    flex: 1 1 18rem;
+    max-width: 20rem;
+    aspect-ratio: 4 / 3;
     border-radius: 1em;
     overflow: hidden;
     background-color: var(--header-background-color);
-    box-shadow: 0em 0em .2em .006em var(--shadow-color-1);
+    box-shadow: 0 0 .2em .006em var(--shadow-color-1);
 }
 
 .service-card-image,
 .service-card-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    #service-container {
+        width: 92%;
+        padding: 2em 0 3em;
+    }
+
+    #service-info-container {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .service-info {
+        max-width: none;
+    }
+
+    .service-cards {
+        flex: 1 1 100%;
+        max-width: none;
+    }
 }
