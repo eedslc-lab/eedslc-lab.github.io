@@ -1,8 +1,19 @@
 :root {
-    --background-color-1: #253031;
-    --background-color-2: #F2F1ED;
-    --color-1: #F37B18;
-    --color-2: #F2F1ED;
     --highlight-color-1: #FED13D;
-    --shadow-color-1: #6d7071;
+    --shadow-color-1: #253031; 
+    --header-background-color: #222020;
+    --header-color: #C75D22;
+    --header-highlight-color: var(--highlight-color-1);
+    --about-background-color: #dbd9cf;
+    --about-color: #222020;
+    --service-project-background-color: #dbd9cf;
+    --service-button-background-color: #C75D22;
+    --service-button-color: #dbd9cf;
+    --service-button-highlight-color-1: var(--highlight-color-1);
+    --service-button-highlight-color-2: #222020;
+    --project-button-color: #C75D22;
+    --project-button-highlight-color: var(--highlight-color-1);
+    --footer-background-color: #dbd9cf;
+    --footer-color-1: #C75D22;
+    --footer-color-2: #222020;
 }

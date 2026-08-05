@@ -3,27 +3,29 @@
 :root {
     --highlight-color-1: #FED13D;
     --shadow-color-1: #253031; 
-
-    --header-background-color: #252323;
+    /* Header */
+    /* --header-background-color: #232020; */
+    --header-background-color: #222020;
     --header-color: #C75D22;
     --header-highlight-color: var(--highlight-color-1);
+    /* About */
+    --about-background-color: #dbd9cf;
+    --about-color: #222020;
 
-    --about-background-color: #CBC8BE;
-    --about-color: #252323;
-
-    --service-project-background-color: #CBC8BE;
-    
+    --service-project-background-color: #dbd9cf;
+    /* Service */
     --service-button-background-color: #C75D22;
-    --service-button-color: #CBC8BE;
+    --service-button-color: #dbd9cf;
     --service-button-highlight-color-1: var(--highlight-color-1);
-    --service-button-highlight-color-2: #252323;
-
+    --service-button-highlight-color-2: #222020;
+    /* Project */
     --project-button-color: #C75D22;
     --project-button-highlight-color: var(--highlight-color-1);
-
-    --footer-background-color: #CBC8BE;
+    /* Footer */
+    --footer-background-color: #dbd9cf;
     --footer-color-1: #C75D22;
-    --footer-color-2: #252323;
+    --footer-color-2: #222020;
+    
 }
 /* ColorScheme Title */
 /* :root {
@@ -54,6 +56,9 @@
 
 /* Blue Black  #253031*/
 /* Warm Black #252323*/
+/* Warm Blacker #222020 */
 /* Orange #C75D22*/
 /* White-ish #CBC8BE*/
+/* OffWhite #dbd9cf*/
 /* Yellow #FED13D*/
+/* Somethin #413535 */
