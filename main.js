@@ -22,6 +22,23 @@ if (menuToggle && navMenu) {
         });
     });
 }
+const serviceMenuToggle = document.getElementById("service-dropdown-indicator");
+const serviceNavMenu = document.getElementById("service-nav-menu");
+const serviceMenuDropdown = document.getElementById("service-menu-dropdown")
+if (serviceMenuToggle && serviceNavMenu) {
+    serviceMenuToggle.addEventListener("click", () => {
+        serviceNavMenu.classList.toggle('open');
+        serviceMenuDropdown.classList.toggle('open');
+
+    });
+
+    // Close menu when a link is tapped
+    serviceNavMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            serviceNavMenu.classList.remove('open');
+        });
+    });
+}
 
 // Service card flip on hover
 document.querySelectorAll('.service-cards').forEach(card => {

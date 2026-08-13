@@ -93,6 +93,39 @@
     align-items: center;
 
 }
+#service-dropdown-indicator {
+    padding-right: 0px;
+}
+.material-symbols-outlined {
+    margin-left: -.4em;
+}
+#service-menu-dropdown {
+    vertical-align: bottom;
+    text-align: start;
+    padding: 0px;
+}
+#service-menu-dropdown.open {
+    transform: rotate(90deg);
+}
+
+#service-nav-menu {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    top: 100%;
+    right: 0;
+    left: 79%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 1% .75em;
+    box-shadow: 0em .3em .3em rgba(0,0,0,.3);
+    z-index: 98;
+}
+#service-nav-menu.open {
+    display: flex;
+    background-color: var(--header-background-color);
+}
 
 .nav-button {
     font-family: "Merriweather";
